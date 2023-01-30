@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-header>
-        Benvenuto
+        Benvenuto a tutti
     </x-header>
 
 
