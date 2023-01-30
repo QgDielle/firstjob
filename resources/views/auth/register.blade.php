@@ -12,27 +12,26 @@
                     @csrf
                     {{-- email --}}
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" name="email" class="form-control" id="email">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Inserisci la tua email" value="{{old('email')}}">
                     </div>
                     {{-- name --}}
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" name="name" class="form-control" id="name">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Inserisci il tuo nome" value="{{old('name')}}">
                     </div>
                     {{-- password --}}
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" id="password">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Inserisci la password">
                     </div>
                     {{-- password_confirmation --}}
                     <div class="mb-3">
-                        <label for="password_confirmation" class="form-label">Ripeti passwowrd</label>
-                        <input type="password" name="password_confirmation"class="form-control"
-                            id="password_confirmation">
+                        <label for="password_confirmation" class="form-label">Ripeti password</label>
+                        <input type="password" name="password_confirmation"class="form-control" id="password_confirmation" placeholder="Conferma la password">
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Register</button>
+                    <button type="submit" class="btn-2 p-2 w-25 mt-4 rounded-2">Register</button>
                 </form>
             </div>
         </div>

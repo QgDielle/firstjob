@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap');
+
+body{
+    font-family: nunito, sans-serif;
+}
+.btn-2 {
+    background: rgb(109, 205, 250);
+    background: linear-gradient(0deg, rgb(14, 136, 193) 0%, rgb(41, 187, 255) 100%);
+    border: none;
+}
+  .btn-2:before {
+    height: 0%;
+    width: 2px;
+}
+  .btn-2:hover {
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
