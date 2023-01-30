@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class CreateFormArticle extends Component
@@ -15,6 +16,7 @@ class CreateFormArticle extends Component
             'title'=>$this->title,
             'description'=>$this->description,
             'price'=>$this->price,
+            'user_id'=>Auth::user()->id,
         ]);
         $this->reset();
         session()->flash('successMessage', 'Hai inserito correttamente inserito il tuo annuncio');
