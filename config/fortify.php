@@ -133,7 +133,7 @@ return [
 
     'features' => [
         Features::registration(),
-        Features::resetPasswords(),
+        /* Features::resetPasswords(),
         // Features::emailVerification(),
         Features::updateProfileInformation(),
         Features::updatePasswords(),
@@ -141,7 +141,7 @@ return [
             'confirm' => true,
             'confirmPassword' => true,
             // 'window' => 0,
-        ]),
+        ]), */
     ],
 
 ];
