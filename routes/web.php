@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PublicController::class , 'welcome'])->name('welcome');
+Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 
-Route::get('/article/create', [ArticleController::class , 'create'])->name('article.create');
+
+
+Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+
+Route::get("/category/name/{category}", [CategoryController::class, "show"])->name("category.show");

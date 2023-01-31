@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +9,22 @@
     <title>Presto.it</title>
     @livewireStyles
 </head>
+
 <body>
     <x-navbar />
-    
-   
+    <x-subnavbar />
+
     <main class="min-vh-100">
-         {{$slot}}
+        {{ $slot }}
     </main>
-   
-    
-    
-    
-    
+
+
+
+
+
     <x-footer />
     @livewireScripts
 
 </body>
+
 </html>
-
-

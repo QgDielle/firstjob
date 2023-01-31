@@ -14,8 +14,10 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::paginate(8);
+        return view("article.index", compact("articles"));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +48,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view("article.show", compact("article"));
     }
 
     /**
