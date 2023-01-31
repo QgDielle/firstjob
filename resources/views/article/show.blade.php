@@ -4,7 +4,7 @@
     </x-header>
     <div class="container justify-content-around my-5">
         <div class="row align-items-center text-center">
-            <div class="col-12 col-md-6 my-3">
+            <div class="col-12 col-md-6">
                 <div>
                     <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
                         <div class="carousel-inner">
@@ -32,15 +32,17 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="w-50 p-3 border shadow">
-                    <h2 class="card-title m-2">{{ $article->title }}</h2>
-                    <hr>
+                <div class="ms-5">
+                    <img src="https://picsum.photos/350" alt="">
+                    <h2 class="card-title mt-3">{{ $article->title }}</h2>
+                    <hr class="w-75 mx-auto">
                     <h5 class="m-2">{{ $article->category->name }}</h5>
                     <p class="m-2">€ {{ $article->price }}</p>
                     <p class="description m-2">{{ $article->description }}</p>
-                    <a href="#" class="btn btn-2 p-2 mt-4 rounded-2">Vai al dettaglio</a>
-                </div>  
+                    <a href="#" class="btn btn-2 mt-2">Aggiungi al carrello</a>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </x-layout>

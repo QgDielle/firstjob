@@ -14,7 +14,7 @@
                     <img src="/media/presto.it-logo.png" alt="">
 
                     <div class="d-flex flex-column border-0 bg-flash rounded-2 p-2">
-                        <h4 class="card-title  mb-3 text-center display-4">Il tuo annuncio in due soli passaggi</h4>
+                        <h4 class="card-title mb-3 text-center display-4">Il tuo annuncio in due soli passaggi</h4>
                         <a class="btn btn-outline-primary mx-auto" href="{{route('article.create')}}">Inserisci annuncio</a>
                     </div>
                 </div> 
