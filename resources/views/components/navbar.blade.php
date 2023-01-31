@@ -18,7 +18,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Ciao {{ Auth::user()->name }}</a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu navbar1">
                             <li><a class="dropdown-item" href="">Profilo</a></li>
                             <li><a class="dropdown-item" href=""
                                     onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
@@ -32,7 +32,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Ciao guest</a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu navbar1">
                             <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
