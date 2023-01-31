@@ -1,31 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap');
 
+:root {
+  --g-color: #ffae00;
+  --v-color: #498921;
+  --r-color: #d62a2a;
+  --b-color: #29bbff;
+  --l-color: #a954dd;
+
+}
+
 body{
-    font-family: nunito, sans-serif;
+  font-family: nunito, sans-serif;
+  
 }
+
+.sfondo-1{
+  background-image: url("../../public/media/cover.jpg");
+  background-position: center;
+  background-size: cover;
+  
+}
+
 .btn-2 {
-    background: rgb(109, 205, 250);
-    background: linear-gradient(0deg, rgb(14, 136, 193) 0%, rgb(41, 187, 255) 100%);
-    border: none;
+  background: rgb(109, 205, 250);
+  background: linear-gradient(0deg, rgb(14, 136, 193) 0%, rgb(41, 187, 255) 100%);
+  border: none;
 }
-  .btn-2:before {
-    height: 0%;
-    width: 2px;
+.btn-2:before {
+  height: 0%;
+  width: 2px;
 }
-  .btn-2:hover {
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-    -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
-    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+.btn-2:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+  4px 4px 6px 0 rgba(116, 125, 136, .5), 
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
 .navbar1{
-
   z-index: 100;
-
 }
 
 .subnav{
   z-index: 1;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.7px);
+  -webkit-backdrop-filter: blur(16.7px);
 }
+
+.btn-3{
+  border: 2px solid var(--l-color);
+  color: #a954dd;
+  transition: 0.3s;
+}
+
+.btn-3:hover{
+  font-size: 20px;
+  
+}
+
+
+
+
+
 

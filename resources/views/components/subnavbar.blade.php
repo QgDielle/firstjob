@@ -1,8 +1,8 @@
-<div class="sticky-top bg-dark subnav">
-    <ul class="d-flex justify-content-around border-2 border-bottom pb-2">
+<div class="sticky-top subnav ">
+    <ul class="d-flex justify-content-center p-2">
         @foreach ($categories as $category)
-            <li class="p-1 list-unstyled rounded-3"><a class="btn btn-outline-warning "
-                    href="{{ route('category.show', compact('category')) }}">{{ $category->name }}</a>
+            <li class="p-1 list-unstyled rounded-3"><a class="btn btn-3"
+                href="{{ route('category.show', compact('category')) }}">{{ $category->name }}</a>
             </li>
         @endforeach
     </ul>

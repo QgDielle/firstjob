@@ -8,12 +8,13 @@
             <div class="col-12 col-md-3 my-3">
                 <div class="card">
                     <img src="https://picsum.photos/300" class="card-img-top" alt="{{ $article->title }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $article->title }}</h5>
+                    <div class="card-body shadow">
+                        <h2 class="card-title">{{ $article->title }}</h2>
+                        <hr>
                         <h5 class="card-title">{{ $article->category->name }}</h5>
                         <p class="card-text">{{ $article->price }}</p>
-                        <p class="card-text">{{ $article->description }}</p>
-                        <a href="{{ route('article.show', compact('article')) }}" class="btn btn-primary">Vai al dettaglio</a>
+                        <p class="fs-italic">{{ $article->description }}</p>
+                        <a href="{{ route('article.show', compact('article')) }}" class="btn btn-2 p-2 mt-4 rounded-2">Vai al dettaglio</a>
                     </div>
                 </div>
             </div>

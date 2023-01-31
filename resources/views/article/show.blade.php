@@ -32,11 +32,12 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="w-50 bg-danger p-3">
+                <div class="w-50 p-3 border shadow">
                     <h2 class="card-title m-2">{{ $article->title }}</h2>
-                    <h5 class="card-title m-2">{{ $article->category->name }}</h5>
-                    <p class="card-text m-2">{{ $article->price }}</p>
-                    <p class="card-text m-2">{{ $article->description }}</p>
+                    <hr>
+                    <h5 class="m-2">{{ $article->category->name }}</h5>
+                    <p class="m-2">€ {{ $article->price }}</p>
+                    <p class="description m-2">{{ $article->description }}</p>
                     <a href="#" class="btn btn-2 p-2 mt-4 rounded-2">Vai al dettaglio</a>
                 </div>  
             </div>
