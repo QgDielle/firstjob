@@ -1,4 +1,5 @@
 <x-layout>
+    <x-subnavbar />
     <x-header>
         Index articoli
     </x-header>

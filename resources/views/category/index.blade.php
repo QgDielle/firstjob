@@ -1,4 +1,5 @@
 <x-layout>
+    <x-subnavbar />
     <div class="container my-5">
         <div class="row">
             @forelse ($category->articles as $article)

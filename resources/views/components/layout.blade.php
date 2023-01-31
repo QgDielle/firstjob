@@ -12,7 +12,7 @@
 
 <body>
     <x-navbar />
-    <x-subnavbar />
+    
 
     <main class="min-vh-100">
         {{ $slot }}

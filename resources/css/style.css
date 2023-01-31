@@ -10,6 +10,8 @@
 }
 
 body{
+  margin: 0px;
+  padding: 0px;
   font-family: nunito, sans-serif;
   
 }
@@ -40,8 +42,12 @@ body{
 .navbar1{
   z-index: 100;
 }
+#bodynav {
+  height: 70px;
+}
 
 .subnav{
+  margin-top: 70px;
   z-index: 1;
   background: rgba(255, 255, 255, 0.17);
   border-radius: 16px;
@@ -58,11 +64,10 @@ body{
 
 .btn-3:hover{
   font-size: 20px;
-  
 }
 
-
-
-
-
-
+.bg-flash{
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}

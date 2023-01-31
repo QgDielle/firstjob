@@ -19,6 +19,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-2 p-2 w-25 mt-4 rounded-2">Login</button>
+                    <a class="btn btn-2 p-2 w-25 mt-4 rounded-2" href="{{route('register')}}">Registrati</a>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" aria-label="Fourth navbar example">
+    <div class="container-fluid fs-4">
         <a class="navbar-brand" href="#">Presto.it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
             aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
