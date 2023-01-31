@@ -9,18 +9,11 @@
         </div>
         <div class="mb-3">
             {{-- <label for="category" class="form-label">Seleziona Categorie</label> --}}
-            <select id="category" class="form-select" aria-label="Default select example">
-                <option selected>Seleziona Categoria</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-                <option value="4">One</option>
-                <option value="5">Two</option>
-                <option value="6">Three</option>
-                <option value="7">One</option>
-                <option value="8">Two</option>
-                <option value="9">Three</option>
-                <option value="10">Three</option>
+            <select wire:model.defer='category' id="category" class="form-select" aria-label="Default select example">
+                <option selected >Seleziona Categoria</option>
+                @foreach ($categories as $category)
+                <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
 
             </select>
         </div>
