@@ -38,7 +38,7 @@
       @enderror
     </div>
     
-    <button class="btn btn-outline-primary" type="submit">submit</button>
+    <button class="btn btn-2 p-2 w-25 mt-4 rounded-2" type="submit">inserisci annuncio</button>
     
   </form>
   

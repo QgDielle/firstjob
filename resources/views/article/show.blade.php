@@ -2,10 +2,10 @@
     <x-header>
         Index articoli
     </x-header>
-    <div class="container my-5">
-        <div class="row">
+    <div class="container justify-content-around my-5">
+        <div class="row align-items-center text-center">
             <div class="col-12 col-md-6 my-3">
-                <div class="card">
+                <div>
                     <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -32,15 +32,13 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="card h-100 align-items-center justify-content-around">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $article->title }}</h5>
-                        <h5 class="card-title">{{ $article->category->name }}</h5>
-                        <p class="card-text">{{ $article->price }}</p>
-                        <p class="card-text">{{ $article->description }}</p>
-                        <a href="#" class="btn btn-primary">Vai al dettaglio</a>
-                    </div>
-                </div>
+                <div class="w-50 bg-danger p-3">
+                    <h2 class="card-title m-2">{{ $article->title }}</h2>
+                    <h5 class="card-title m-2">{{ $article->category->name }}</h5>
+                    <p class="card-text m-2">{{ $article->price }}</p>
+                    <p class="card-text m-2">{{ $article->description }}</p>
+                    <a href="#" class="btn btn-2 p-2 mt-4 rounded-2">Vai al dettaglio</a>
+                </div>  
             </div>
         </div>
     </div>

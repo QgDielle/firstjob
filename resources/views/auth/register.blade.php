@@ -31,7 +31,7 @@
                         <input type="password" name="password_confirmation"class="form-control" id="password_confirmation" placeholder="Conferma la password">
                     </div>
 
-                    <button type="submit" class="btn-2 p-2 w-25 mt-4 rounded-2">Register</button>
+                    <button type="submit" class="btn btn-2 p-2 w-25 mt-4 rounded-2">Register</button>
                 </form>
             </div>
         </div>
