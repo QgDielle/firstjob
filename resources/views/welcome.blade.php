@@ -32,7 +32,7 @@
                         <div class="card-body ">
                             <h5 class="card-title">{{ $article->category->name }}</h5>
                             <h5 class="card-title">{{ $article->title }}</h5>
-                            <p class="card-text">{{ $article->price }}</p>
+                            <p class="card-text">€ {{ $article->price }}</p>
                             <p class="card-text">{{ $article->description }}</p>
                             <div class="d-flex justify-content-end">
                                 <a class="btn btn-2 p-2 mt-4 rounded-2 me-3" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
