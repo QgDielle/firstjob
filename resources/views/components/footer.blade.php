@@ -1,58 +1,12 @@
-<!-- Footer -->
-<footer class="bg-light text-center ">
-    <!-- Grid container -->
-    <div class="container p-4">
-  
-  
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form5Example2" class="form-control" />
-                <label class="form-label" for="form5Example2">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-  
-            <!--Grid column-->
-            <div class="col-auto">
-  
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-  
-  
-  
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="{{route('welcome')}}" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="{{route('revisor.request')}}" class="nav-link px-2 text-muted">Diventa Revisor</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
   </footer>
-  <!-- Footer -->
+</div>

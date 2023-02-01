@@ -32,3 +32,5 @@ Route::get("/category/name/{category}", [CategoryController::class, "show"])->na
 Route::get("/revisor/index", [RevisorController::class,'index'])->name('revisor.index');
 Route::patch('/revisor/accept/{article}' , [RevisorController::class , 'revisor_accept'])->name('revisor.accept');
 Route::patch('/revisor/decline/{article}' , [RevisorController::class , 'revisor_decline'])->name('revisor.decline');
+Route::get('/revisor/request' , [RevisorController::class, 'revisor_request'])->name('revisor.request');
+Route::get('/revisor/make/{user}' , [RevisorController::class, 'revisor_make'])->name('make.revisor');
