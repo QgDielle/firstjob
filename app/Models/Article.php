@@ -32,4 +32,11 @@ class Article extends Model
 
         return Article::where('is_accepted', NULL)->count();
     }
+
+    public function setAccepted($value){
+        $this->is_accepted = $value;
+
+        $this->save();
+        return true;
+    }
 }

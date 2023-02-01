@@ -1,7 +1,13 @@
 <x-layout>
+
     <x-header>
-        Index articoli
+        Lista articoli da rivisionare
     </x-header>
+
+    <h1>{{$article_to_check ? "Ecco l'ultimo annuncio da rivisionare" : "Nessun articolo da rivisionare"}}</h1>
+    
+    @if ($article_to_check)
+
     <div class="container justify-content-around my-5">
         <div class="row align-items-center text-center">
             <div class="col-12 col-md-6">
@@ -34,14 +40,30 @@
             <div class="col-12 col-md-6">
                 <div class="ms-5">
                     <img src="https://picsum.photos/350" alt="">
-                    <h2 class="card-title mt-3">{{ $article->title }}</h2>
+                    <h2 class="card-title mt-3">{{ $article_to_check->title }}</h2>
                     <hr class="w-75 mx-auto">
-                    <h5 class="m-2">{{ $article->category->name }}</h5>
-                    <p class="m-2">€ {{ $article->price }}</p>
-                    <p class="description m-2">{{ $article->description }}</p>
+                    <h5 class="m-2">{{ $article_to_check->category->name }}</h5>
+                    <p class="m-2">€ {{ $article_to_check->price }}</p>
+                    <p class="description m-2">{{ $article_to_check->description }}</p>
                     <a href="#" class="btn btn-2 mt-2">####</a>
+                    <form method="POST" action="{{route('revisor.accept' , ['article' => $article_to_check])}}">
+                        @method('PATCH')
+                        @csrf
+                    <button type="submit" class="btn btn-success my-1">Accetta</button>
+                    </form>
+                    <form method="POST" action="{{route('revisor.decline' , ['article' => $article_to_check])}}">
+                        @method('PATCH')
+                        @csrf
+                    <button type="submit" class="btn btn-danger my-1">Rifiuta</button>
+                    </form>
+                    <x-messages />
                 </div>
             </div>
         </div>
     </div>
+    
+
+        
+    @endif
+
 </x-layout>

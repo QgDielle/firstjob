@@ -13,4 +13,21 @@ class RevisorController extends Controller
         
         return view('revisor.index', compact('article_to_check'));
     }
+
+    public function revisor_accept(Article $article){
+
+        $article->setAccepted(true);
+
+        return redirect()->back()->with('successMessage' , "Hai accettato l'articolo");
+
+    }
+
+    public function revisor_decline(Article $article){
+
+        $article->setAccepted(false);
+
+        return redirect()->back()->with('successMessage' , "Hai rifiutato l'articolo");
+
+    }
+
 }
