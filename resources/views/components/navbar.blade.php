@@ -12,7 +12,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('welcome') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('article.index') }}">Index articoli</a>
+                    <a class="nav-link" href="{{ route('article.index') }}">Vai agli annunci</a>
                 </li>
                 @auth
                     <li class="nav-item dropdown">
@@ -31,7 +31,7 @@
                 @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Ciao guest</a>
+                            aria-expanded="false">Registrati!</a>
                         <ul class="dropdown-menu navbar1">
                             <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
                             <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>

@@ -39,7 +39,7 @@
                     <h5 class="m-2">{{ $article->category->name }}</h5>
                     <p class="m-2">€ {{ $article->price }}</p>
                     <p class="description m-2">{{ $article->description }}</p>
-                    <a href="#" class="btn btn-2 mt-2">Aggiungi al carrello</a>
+                    <a href="#" class="btn btn-2 mt-2">####</a>
                 </div>
             </div>
         </div>
