@@ -14,6 +14,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.index') }}">Vai agli annunci</a>
                 </li>
+                @if (Auth::check() && Auth::user()->is_revisor)
+                <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
+                <span class="text-white bg-danger">{{App\Models\Article::toBeRevisionedCount()}}</span>
+                @endif
                 @auth
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"

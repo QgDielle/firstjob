@@ -27,4 +27,9 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public static function toBeRevisionedCount(){
+
+        return Article::where('is_accepted', NULL)->count();
+    }
 }
