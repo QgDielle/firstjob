@@ -12,41 +12,60 @@ use Illuminate\Support\Facades\Mail;
 
 class RevisorController extends Controller
 {
-    public function index(){
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
 
         $article_to_check = Article::where('is_accepted', NULL)->first();
 
         return view('revisor.index', compact('article_to_check'));
     }
 
-    public function revisor_accept(Article $article){
+    public function revisor_accept(Article $article)
+    {
 
         $article->setAccepted(true);
 
-        return redirect()->back()->with('successMessage' , "Hai accettato l'articolo");
-
+        return redirect()->back()->with('successMessage', "Hai accettato l'articolo");
     }
 
-    public function revisor_decline(Article $article){
+    public function revisor_decline(Article $article)
+    {
 
         $article->setAccepted(false);
 
-        return redirect()->back()->with('successMessage' , "Hai rifiutato l'articolo");
-
+        return redirect()->back()->with('successMessage', "Hai rifiutato l'articolo");
     }
 
-    public function revisor_request(){
+    // public function revisor_request()
+    // {
+    //     $mail = Auth::user()->email;
+    //     Mail::to($mail)->send(new RevisorRequestMail(Auth::user()));
+
+    //     return redirect()->back()->with('successMessage', 'Hai inviato correttamente la richiesta');
+    // }
+
+    public function revisor_make(User $user)
+    {
+        Artisan::call('presto:makeUserRevisor', ['email' => $user->email]);
+
+        return redirect('/')->with('successMessage', 'Complimenti sei diventato un revisore!');
+    }
+
+    public function revisor_contactus()
+    {
+        return view('revisor.contact-us');
+    }
+
+    public function revisor_submit(Request $request)
+    {
         $mail = Auth::user()->email;
-        Mail::to($mail)->send(new RevisorRequestMail(Auth::user()));
-
-        return redirect()->back()->with('successMessage' , 'Hai inviato correttamente la richiesta');
+        $user_message = $request->message;
+        Mail::to($mail)->send(new RevisorRequestMail(Auth::user(), $user_message));
+        return redirect(route('welcome'));
     }
-
-    public function revisor_make(User $user){
-        Artisan::call('presto:makeUserRevisor' , ['email' => $user->email]);
-
-        return redirect('/')->with('successMessage' , 'Complimenti sei diventato un revisore!');
-    }
-
-
 }

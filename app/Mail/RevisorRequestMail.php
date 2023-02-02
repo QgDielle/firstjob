@@ -9,21 +9,24 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Http\Request;
 
 class RevisorRequestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $user;
+    public $user_message;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user_data)
+    public function __construct(User $user, $user_message)
     {
-        $this->user = $user_data;
+        $this->user = $user;
+        $this->user_message = $user_message;
     }
 
     /**

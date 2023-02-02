@@ -20,17 +20,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 
 
-                //? ARTICOLI
+//? ARTICOLI
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
-            //? CATEGORIE
+//? CATEGORIE
 Route::get("/category/name/{category}", [CategoryController::class, "show"])->name("category.show");
 
-            //? REVISORE
-Route::get("/revisor/index", [RevisorController::class,'index'])->name('revisor.index');
-Route::patch('/revisor/accept/{article}' , [RevisorController::class , 'revisor_accept'])->name('revisor.accept');
-Route::patch('/revisor/decline/{article}' , [RevisorController::class , 'revisor_decline'])->name('revisor.decline');
-Route::get('/revisor/request' , [RevisorController::class, 'revisor_request'])->name('revisor.request');
-Route::get('/revisor/make/{user}' , [RevisorController::class, 'revisor_make'])->name('make.revisor');
+//? REVISORE
+Route::get("/revisor/index", [RevisorController::class, 'index'])->name('revisor.index');
+Route::patch('/revisor/accept/{article}', [RevisorController::class, 'revisor_accept'])->name('revisor.accept');
+Route::patch('/revisor/decline/{article}', [RevisorController::class, 'revisor_decline'])->name('revisor.decline');
+Route::get('/revisor/request', [RevisorController::class, 'revisor_request'])->name('revisor.request');
+Route::get('/revisor/make/{user}', [RevisorController::class, 'revisor_make'])->name('make.revisor');
+
+//  LAVORA CON NOI
+Route::get("/revisor/contact-us", [RevisorController::class, 'revisor_contactus'])->name('revisor.contactus');
+Route::post("/revisor/submit", [RevisorController::class, 'revisor_submit'])->name('revisor.submit');

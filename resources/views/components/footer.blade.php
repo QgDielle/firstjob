@@ -5,7 +5,7 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="{{route('revisor.request')}}" class="nav-link px-2 text-muted">Diventa Revisor</a></li>
+      <li class="nav-item"><a href="{{route('revisor.contactus')}}" class="nav-link px-2 text-muted">Contattaci</a></li>
     </ul>
     <p class="text-center text-muted">© 2022 Company, Inc</p>
   </footer>
