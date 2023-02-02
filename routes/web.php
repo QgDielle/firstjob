@@ -30,11 +30,11 @@ Route::get("/category/name/{category}", [CategoryController::class, "show"])->na
 
 //? REVISORE
 Route::get("/revisor/index", [RevisorController::class, 'index'])->name('revisor.index');
+//? ACCETTA / RIFIUTA articolo
 Route::patch('/revisor/accept/{article}', [RevisorController::class, 'revisor_accept'])->name('revisor.accept');
 Route::patch('/revisor/decline/{article}', [RevisorController::class, 'revisor_decline'])->name('revisor.decline');
+//?  LAVORA CON NOI
 Route::get('/revisor/request', [RevisorController::class, 'revisor_request'])->name('revisor.request');
 Route::get('/revisor/make/{user}', [RevisorController::class, 'revisor_make'])->name('make.revisor');
-
-//  LAVORA CON NOI
 Route::get("/revisor/contact-us", [RevisorController::class, 'revisor_contactus'])->name('revisor.contactus');
 Route::post("/revisor/submit", [RevisorController::class, 'revisor_submit'])->name('revisor.submit');
