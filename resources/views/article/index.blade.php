@@ -15,7 +15,7 @@
                             <h5 class="card-title">{{ $article->category->name }}</h5>
                             <p class="card-text">€ {{ $article->price }}</p>
                             {{-- <p class="fs-italic">{{ $article->description }}</p> --}}
-                            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-2  mt-4 ">Vai al
+                            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-2 mt-4">Vai al
                                 dettaglio</a>
                         </div>
                     </div>
