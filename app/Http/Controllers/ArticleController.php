@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Laravel\Scout\Searchable;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -19,6 +20,12 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::paginate(8);
+        return view("article.index", compact("articles"));
+    }
+
+    public function searchArticle(Request $request)
+    {
+        $articles = Article::search($request->searched)->where("is_accepted", true)->paginate(10);
         return view("article.index", compact("articles"));
     }
 

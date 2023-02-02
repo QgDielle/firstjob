@@ -1,13 +1,13 @@
 <x-layout>
-    
+
     <x-header>
         Lavora con noi
     </x-header>
-    
+
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form action="{{route('revisor.submit')}}" method="POST">
+                <form action="{{ route('revisor.submit') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="message" class="form-label">Inserisci il tuo messaggio</label>
@@ -19,9 +19,9 @@
                     </div>
                     <button type="submit" class="btn btn-dark">invia richiesta</button>
                 </form>
-                
+
             </div>
         </div>
     </div>
-    
+
 </x-layout>

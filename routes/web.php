@@ -38,3 +38,6 @@ Route::get('/revisor/request', [RevisorController::class, 'revisor_request'])->n
 Route::get('/revisor/make/{user}', [RevisorController::class, 'revisor_make'])->name('make.revisor');
 Route::get("/revisor/contact-us", [RevisorController::class, 'revisor_contactus'])->name('revisor.contactus');
 Route::post("/revisor/submit", [RevisorController::class, 'revisor_submit'])->name('revisor.submit');
+
+//?
+Route::get("/ricerca/annuncio", [ArticleController::class, "searchArticle"])->name("article.search");

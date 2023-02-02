@@ -9,14 +9,14 @@
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{route('welcome') }}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('welcome') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('article.index') }}">Vai agli annunci</a>
                 </li>
                 @if (Auth::check() && Auth::user()->is_revisor)
-                <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
-                <span class="text-white bg-danger">{{App\Models\Article::toBeRevisionedCount()}}</span>
+                    <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
+                    <span class="text-white bg-danger">{{ App\Models\Article::toBeRevisionedCount() }}</span>
                 @endif
                 @auth
                     <li class="nav-item dropdown">
@@ -45,8 +45,10 @@
 
                 @endauth
             </ul>
-            <form role="search">
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <form action="{{ route('article.search') }}" method="GET" class="d-flex" role="search">
+                <input name="searched" class="form-control me-2" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn btn-outline-seccess" type="submit">Ricerca</button>
             </form>
         </div>
     </div>
