@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        Index articoli
+        {{$article->title}}
     </x-header>
     <div class="container justify-content-around my-5">
         <div class="row align-items-center text-center">
@@ -33,7 +33,6 @@
             </div>
             <div class="col-12 col-md-6">
                 <div class="ms-5">
-                    <img src="https://picsum.photos/350" alt="">
                     <h2 class="card-title mt-3">{{ $article->title }}</h2>
                     <hr class="w-75 mx-auto">
                     <h5 class="m-2">{{ $article->category->name }}</h5>

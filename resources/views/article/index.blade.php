@@ -1,7 +1,7 @@
 <x-layout>
     <x-subnavbar />
     <x-header>
-        Index articoli
+        Tutti gli articoli
     </x-header>
     <div class="container my-5">
         <div class="row">
@@ -14,7 +14,7 @@
                             <hr>
                             <h5 class="card-title">{{ $article->category->name }}</h5>
                             <p class="card-text">€ {{ $article->price }}</p>
-                            <p class="fs-italic">{{ $article->description }}</p>
+                            {{-- <p class="fs-italic">{{ $article->description }}</p> --}}
                             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-2  mt-4 ">Vai al
                                 dettaglio</a>
                         </div>

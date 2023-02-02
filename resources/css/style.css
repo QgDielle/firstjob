@@ -13,14 +13,14 @@ body{
   margin: 0px;
   padding: 0px;
   font-family: nunito, sans-serif;
-  
+
 }
 
 .sfondo-1{
-  background-image: url("../../public/media/cover.jpg");
+  background-image: url("../../public/media/prova1.jpg");
   background-position: center;
   background-size: cover;
-  
+
 }
 
 
@@ -99,4 +99,3 @@ body{
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-

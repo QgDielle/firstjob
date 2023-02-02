@@ -5,7 +5,7 @@
     </x-header>
 
     <h1>{{$article_to_check ? "Ecco l'ultimo annuncio da rivisionare" : "Nessun articolo da rivisionare"}}</h1>
-    
+
     @if ($article_to_check)
 
     <div class="container justify-content-around my-5">
@@ -38,13 +38,14 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="ms-5">
+                <div class="container-fluid justify-content-center  ms-5">
                     <img src="https://picsum.photos/350" alt="">
                     <h2 class="card-title mt-3">{{ $article_to_check->title }}</h2>
                     <hr class="w-75 mx-auto">
                     <h5 class="m-2">{{ $article_to_check->category->name }}</h5>
                     <p class="m-2">€ {{ $article_to_check->price }}</p>
                     <p class="description m-2">{{ $article_to_check->description }}</p>
+                    <div>
                     <a href="#" class="btn btn-2 mt-2">####</a>
                     <form method="POST" action="{{route('revisor.accept' , ['article' => $article_to_check])}}">
                         @method('PATCH')
@@ -58,12 +59,13 @@
                     </form>
                     <x-messages />
                 </div>
+                </div>
             </div>
         </div>
     </div>
-    
 
-        
+
+
     @endif
 
 </x-layout>
