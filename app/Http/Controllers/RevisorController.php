@@ -42,6 +42,13 @@ class RevisorController extends Controller
         return redirect()->back()->with('successMessage', "Hai rifiutato l'articolo");
     }
 
+    public function revisor_recap()
+    {
+        $articles_recap = Article::all()->where('is_accepted', !NULL);
+
+        return view('revisor.recap', compact('articles_recap'));
+    }
+
     // public function revisor_request()
     // {
     //     $mail = Auth::user()->email;
