@@ -1,101 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap");
 
 :root {
-  --g-color: #ffae00;
-  --v-color: #498921;
-  --r-color: #d62a2a;
-  --b-color: #29bbff;
-  --l-color: #a954dd;
-
+    --g-color: #ffae00;
+    --v-color: #498921;
+    --r-color: #d62a2a;
+    --b-color: #29bbff;
+    --l-color: #a954dd;
 }
 
-body{
-  margin: 0px;
-  padding: 0px;
-  font-family: nunito, sans-serif;
-
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: nunito, sans-serif;
 }
 
-.sfondo-1{
-  background-image: url("../../public/media/prova1.jpg");
-  background-position: center;
-  background-size: cover;
-
+.sfondo-1 {
+    background-image: url("../../public/media/prova1.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .btn-2 {
-  background-color: #111827;
-  border: 1px solid transparent;
-  border-radius: .75rem;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex: 0 0 auto;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.5rem;
-  padding: .75rem 1.2rem;
-  text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
+    background-color: #111827;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: 0.75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6b7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: 0.2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
 }
 
 .btn-2:hover {
-  background-color: #374151;
-  color: #FFFFFF;
+    background-color: #374151;
+    color: #ffffff;
 }
 
 .btn-2:focus {
-  box-shadow: none;
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
-  .btn-2 {
-    padding: .75rem 1.5rem;
-  }
+    .btn-2 {
+        padding: 0.75rem 1.5rem;
+    }
 }
-.navbar1{
-  z-index: 100;
+.navbar1 {
+    z-index: 100;
 }
 #bodynav {
-  height: 70px;
+    height: 70px;
 }
 
-.subnav{
-  margin-top: 70px;
-  height: 65px;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.17);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16.7px);
-  -webkit-backdrop-filter: blur(16.7px);
+.subnav {
+    margin-top: 70px;
+    height: 65px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16.7px);
+    -webkit-backdrop-filter: blur(16.7px);
 }
 
-.btn-3{
-  border: 2px solid rgb(103, 103, 103);
-  color: #498921;
-  transition: 0.3s;
+.btn-3 {
+    border: 2px solid rgb(103, 103, 103);
+    color: #498921;
+    transition: 0.3s;
 }
 
-.btn-3:hover{
-  font-size: 20px;
+.btn-3:hover {
+    font-size: 20px;
 }
 
-.bg-flash{
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+.bg-flash {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-
+/* style table */
+.content-table {
+    width: 100vw;
+    background-color: #d3d8df;
+}
+.content-table thead tr {
+    background-color: rgb(238, 141, 15);
+    font-weight: bold;
+}
+.content-table thead tr th {
+    border-collapse: collapse;
+    padding: 20px;
+    font-size: 1.1em;
+}
+.content-table tbody tr {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+.content-table tbody {
+    width: 100%;
+}
+.content-table tbody tr {
+    width: 100%;
+}
+.content-table td:first-child {
+    width: 7%;
+}
+.content-table td:last-child {
+    width: 20%;
+}
+.content-table td {
+    padding: 12px 15px;
+    width: 16%;
+    text-align: center;
+}
+/* end style table */

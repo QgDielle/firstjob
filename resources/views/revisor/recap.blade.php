@@ -6,35 +6,68 @@
     </x-header>
 
     <div class="container justify-content-around my-5">
-        <div class="row align-items-center text-center">
-            @forelse($articles_recap as $article)
-                <div class="col-12 col-md-4">
-                    <div class="ms-5">
-                        <img src="https://picsum.photos/350" alt="">
-                        <h2 class="card-title mt-3">{{ $article->title }}</h2>
-                        <hr class="w-75 mx-auto">
-                        <h5 class="m-2">{{ $article->category->name }}</h5>
-                        <p class="m-2">€ {{ $article->price }}</p>
-                        <p class="description m-2">{{ $article->description }}</p>
-                        <a href="#" class="btn btn-2 mt-2">####</a>
-                        <form method="POST" action="{{ route('revisor.accept', ['article' => $article]) }}">
-                            @method('PATCH')
-                            @csrf
-                            <button type="submit" class="btn btn-success my-1">Accetta</button>
-                        </form>
-                        <form method="POST" action="{{ route('revisor.decline', ['article' => $article]) }}">
-                            @method('PATCH')
-                            @csrf
-                            <button type="submit" class="btn btn-danger my-1">Rifiuta</button>
-                        </form>
-                        <x-messages />
-                    </div>
-                </div>
+        <div class="row align-items-center text-center p-5">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>
+                            id
+                        </th>
+                        <th>
+                            photo
+                        </th>
+                        <th>
+                            title
+                        </th>
+                        <th>
+                            price
+                        </th>
+                        <th>
+                            name creator
+                        </th>
+                        <th>
+                            action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($articles_recap as $article)
+                        <tr>
+                            <td>
+                                <span>{{ $article->id }}</span>
+                            </td>
+                            <td>
+                                <img class="rounded-3" src="https://picsum.photos/50" alt="placeholder">
+                            </td>
+                            <td>
+                                <p>{{ $article->title }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $article->price }}</p>
+                            </td>
+                            <td>
+                                <p>{{ $article->user->name }}</p>
+                            </td>
+                            <td>
+                                <div class="d-flex gap-5 w-100 justify-content-center">
+                                    <form method="POST" action="{{ route('revisor.accept', ['article' => $article]) }}">
+                                        @method('PATCH')
+                                        @csrf
+                                        <button type="submit" class="btn btn-success my-1">Accetta</button>
+                                    </form>
+                                    <form method="POST"
+                                        action="{{ route('revisor.decline', ['article' => $article]) }}">
+                                        @method('PATCH')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger my-1">Rifiuta</button>
+                                    </form>
+                                </div>
+                            </td>
 
-
-            @empty
-                <h1 class="text-center">nessun articolo</h1>
-            @endforelse
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 
