@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap");
 
 :root {
+<<<<<<< HEAD
     --g-color: #ffae00;
     --v-color: #498921;
     --r-color: #d62a2a;
@@ -66,11 +67,37 @@ body {
 }
 .navbar1 {
     z-index: 100;
+=======
+  --e-color: #82C7AC;
+  --v-color: #226f1f;
+  --r-color: #d62a2a;
+  --b-color: #29bbff;
+  --l-color: #a954dd;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  font-family: nunito, sans-serif;
+  
+}
+
+.sfondo-1{
+  background-image: url("../../public/media/3a93c940-b3ce-4fdd-a5bb-6a2406a8d14b.png");
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.navbar1{
+  z-index: 100;
+>>>>>>> b102694 (migliorie varie lato front)
 }
 #bodynav {
     height: 70px;
 }
 
+<<<<<<< HEAD
 .subnav {
     margin-top: 70px;
     height: 65px;
@@ -86,6 +113,105 @@ body {
     border: 2px solid rgb(103, 103, 103);
     color: #498921;
     transition: 0.3s;
+=======
+.blue{
+  background-color: #82C7AC;
+  color: #FFFFFF;
+}
+
+.ciao{
+  color: #82C7AC;
+}
+
+.subnav{
+  margin-top: 70px;
+  height: 65px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16.7px);
+  -webkit-backdrop-filter: blur(16.7px);
+}
+
+/* BTN CARD DETTAGLIO */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: var(--e-color);
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+  font-size: 15px;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: var(--v-color);
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+/* BTN CATEGORIE */
+
+.btn-3{
+  border: 2px solid rgb(103, 103, 103);
+  color:var(--v-color);
+  transition: 0.3s;
+>>>>>>> b102694 (migliorie varie lato front)
 }
 
 .btn-3:hover {
@@ -98,6 +224,7 @@ body {
     -webkit-backdrop-filter: blur(5px);
 }
 
+<<<<<<< HEAD
 /* style table */
 .content-table {
     width: 100vw;
@@ -136,3 +263,25 @@ body {
     text-align: center;
 }
 /* end style table */
+=======
+/* CARD ANNUNCI */
+
+.card-title{
+  font-size: 20px;
+}
+
+.card-price{
+  font-style: italic;
+  font-size: 17px;
+}
+
+.car-1{
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+}
+
+
+>>>>>>> b102694 (migliorie varie lato front)

@@ -35,10 +35,10 @@
                 <div class="ms-5">
                     <h2 class="card-title mt-3">{{ $article->title }}</h2>
                     <hr class="w-75 mx-auto">
-                    <h5 class="m-2">{{ $article->category->name }}</h5>
-                    <p class="m-2">€ {{ $article->price }}</p>
+                    <h5 class="card-category m-2">{{ $article->category->name }}</h5>
+                    <p class="card-price m-2">€ {{ $article->price }}</p>
                     <p class="description m-2">{{ $article->description }}</p>
-                    <a href="#" class="btn btn-2 mt-2">####</a>
+                    <a href="#" class="btn btn-3 mt-2">####</a>
                 </div>
             </div>
         </div>

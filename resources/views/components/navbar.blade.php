@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-white fixed-top bg-gradient">
+<nav class="blue navbar navbar-expand-md fixed-top ">
     <div class="container-fluid fs-4">
         <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
@@ -37,20 +37,20 @@
             </ul>
         </li>
         @else
-        <li class="list-unstyled nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            <lord-icon src="https://cdn.lordicon.com/ljvjsnvh.json" trigger="hover" colors="primary:#9cf4a7,secondary:#000000"
-            stroke="80" style="width:50px; height:50px">
-        </lord-icon>
-        Registrati - Accedi</a>
-        <ul class="dropdown-menu navbar1">
-            <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-            <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>
-    </li>
-    @endauth
-</div>
+        <div class="ciao bg-white p-1 rounded-3">
+            <li class="list-unstyled nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Registrati - Accedi</a>
+                <ul class="dropdown-menu navbar1">
+                    <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
+                    <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </div>
+        
+        @endauth
+    </div>
 </div>
 </nav>
