@@ -44,7 +44,7 @@ class RevisorController extends Controller
 
     public function revisor_recap()
     {
-        $articles_recap = Article::all()->where('is_accepted', !NULL);
+        $articles_recap = Article::where('is_accepted', TRUE)->orWhere('is_accepted', FALSE)->get();
 
         return view('revisor.recap', compact('articles_recap'));
     }

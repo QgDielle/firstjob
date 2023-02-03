@@ -1,4 +1,5 @@
 <x-layout>
+    {{-- @dd($articles_recap) --}}
 
     {{-- @dd($articles_recap) --}}
     <x-header>
@@ -50,17 +51,22 @@
                             </td>
                             <td>
                                 <div class="d-flex gap-5 w-100 justify-content-center">
-                                    <form method="POST" action="{{ route('revisor.accept', ['article' => $article]) }}">
-                                        @method('PATCH')
-                                        @csrf
-                                        <button type="submit" class="btn btn-success my-1">Accetta</button>
-                                    </form>
-                                    <form method="POST"
-                                        action="{{ route('revisor.decline', ['article' => $article]) }}">
-                                        @method('PATCH')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger my-1">Rifiuta</button>
-                                    </form>
+                                    @if ($article->is_accepted == false)
+                                        <form method="POST"
+                                            action="{{ route('revisor.accept', ['article' => $article]) }}">
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" class="btn btn-success my-1">reinserisci
+                                                articoli</button>
+                                        </form>
+                                    @else
+                                        <form method="POST"
+                                            action="{{ route('revisor.decline', ['article' => $article]) }}">
+                                            @method('PATCH')
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger my-1">rimuovi articolo</button>
+                                        </form>
+                                    @endif
                                 </div>
                             </td>
 

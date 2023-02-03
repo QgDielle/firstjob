@@ -126,7 +126,9 @@ body {
     width: 7%;
 }
 .content-table td:last-child {
+    font-weight: 700;
     width: 20%;
+    border-left: 2px solid black;
 }
 .content-table td {
     padding: 12px 15px;
