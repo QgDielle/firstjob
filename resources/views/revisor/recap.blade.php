@@ -56,15 +56,15 @@
                                             action="{{ route('revisor.accept', ['article' => $article]) }}">
                                             @method('PATCH')
                                             @csrf
-                                            <button type="submit" class="btn btn-success my-1">reinserisci
-                                                articoli</button>
+                                            <button type="submit" class="btn btn-success my-1">Reinserisci
+                                                articolo</button>
                                         </form>
                                     @else
                                         <form method="POST"
                                             action="{{ route('revisor.decline', ['article' => $article]) }}">
                                             @method('PATCH')
                                             @csrf
-                                            <button type="submit" class="btn btn-danger my-1">rimuovi articolo</button>
+                                            <button type="submit" class="btn btn-danger my-1">Rimuovi articolo</button>
                                         </form>
                                     @endif
                                 </div>
