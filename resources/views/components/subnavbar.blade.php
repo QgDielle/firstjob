@@ -1,8 +1,10 @@
 <nav class="bg-custom1 navbar  sticky-bottom"> 
     <div class="container-fluid justify-content-center pt-2">   
         
-        
-        {{-- <button class="btn btn-outline-custom1 border-1 border-white mb-2" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>     --}}
+        <div class="container px-5">
+            <x-search />
+
+        </div>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample05">
             <ul class="row justify-content-center p-0">
                 @foreach ($categories as $category)

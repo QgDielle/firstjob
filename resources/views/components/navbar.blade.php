@@ -4,7 +4,7 @@
             <a class="navbar-brand " href="{{route('welcome')}}">Presto.it</a>
             
         </div>
-        <button class="btn btn-outline-custom1 border-1 border-white" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
+        <button class="btn btn-outline-custom1 border-1 border-white me-1" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,11 +19,11 @@
                     @endif
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-custom1" href="{{route('revisor.recap')}}">Articoli revisionati</a>
+                    <a class="btn btn-outline-custom1 me-1" href="{{route('revisor.recap')}}">Articoli revisionati</a>
                 </li>
                 @endif
                 <li class="nav-item">
-                    <a class="btn btn-outline-custom1" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
+                    <a class="btn btn-outline-custom1 me-1" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
                 </li>
                 
                 

@@ -8,7 +8,7 @@
     <div class="container-fluid my-5">
         <div class="container">
             <div class="row align-items-center text-center">
-                <table class="content-table table-bordered">
+                <table class="content-table table-bordered bg-white">
                     <thead>
                         <tr>
                             <th>

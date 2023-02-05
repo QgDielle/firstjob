@@ -4,7 +4,7 @@
     </x-header>
     <div class="container d-flex justify-content-center">
         <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
-        <a class="btn btn-outline-custom" href="{{route('article.create')}}">Aggiungi articolo</a>
+        <a class="btn btn-outline-custom-r" href="{{route('article.create')}}">Aggiungi articolo</a>
     </div>
     <div class="container my-5">
         <div class="row">
