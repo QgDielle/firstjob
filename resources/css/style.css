@@ -1,73 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap");
 
 :root {
-<<<<<<< HEAD
-    --g-color: #ffae00;
-    --v-color: #498921;
-    --r-color: #d62a2a;
-    --b-color: #29bbff;
-    --l-color: #a954dd;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: nunito, sans-serif;
-}
-
-.sfondo-1 {
-    background-image: url("../../public/media/prova1.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.btn-2 {
-    background-color: #111827;
-    border: 1px solid transparent;
-    border-radius: 0.75rem;
-    box-sizing: border-box;
-    color: #ffffff;
-    cursor: pointer;
-    flex: 0 0 auto;
-    font-family: "Inter var", ui-sans-serif, system-ui, -apple-system, system-ui,
-        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.2rem;
-    text-align: center;
-    text-decoration: none #6b7280 solid;
-    text-decoration-thickness: auto;
-    transition-duration: 0.2s;
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: auto;
-}
-
-.btn-2:hover {
-    background-color: #374151;
-    color: #ffffff;
-}
-
-.btn-2:focus {
-    box-shadow: none;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-}
-
-@media (min-width: 768px) {
-    .btn-2 {
-        padding: 0.75rem 1.5rem;
-    }
-}
-.navbar1 {
-    z-index: 100;
-=======
   --e-color: #82C7AC;
   --v-color: #226f1f;
   --r-color: #d62a2a;
@@ -79,191 +12,120 @@ body{
   margin: 0px;
   padding: 0px;
   font-family: nunito, sans-serif;
-  
+  background-color: rgb(239, 252, 212);
 }
 
 .sfondo-1{
   background-image: url("../../public/media/3a93c940-b3ce-4fdd-a5bb-6a2406a8d14b.png");
-  background-position: center;
-  background-size: cover;
-  
+  background-position: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.navbar1{
-  z-index: 100;
->>>>>>> b102694 (migliorie varie lato front)
-}
-#bodynav {
-    height: 70px;
-}
-
-<<<<<<< HEAD
-.subnav {
-    margin-top: 70px;
-    height: 65px;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.17);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(16.7px);
-    -webkit-backdrop-filter: blur(16.7px);
-}
-
-.btn-3 {
-    border: 2px solid rgb(103, 103, 103);
-    color: #498921;
-    transition: 0.3s;
-=======
-.blue{
-  background-color: #82C7AC;
-  color: #FFFFFF;
-}
-
-.ciao{
-  color: #82C7AC;
-}
-
-.subnav{
-  margin-top: 70px;
-  height: 65px;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.17);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(16.7px);
-  -webkit-backdrop-filter: blur(16.7px);
-}
-
-/* BTN CARD DETTAGLIO */
-.button-17 {
-  align-items: center;
-  appearance: none;
-  background-color: var(--e-color);
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  cursor: pointer;
-  display: inline-flex;
-  fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 15px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: auto;
-  will-change: transform,opacity;
-  z-index: 0;
-  font-size: 15px;
-}
-
-.button-17:hover {
-  background: #F6F9FE;
-  color: var(--v-color);
-}
-
-.button-17:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.button-17:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.button-17:not(:disabled) {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):hover {
-  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
-}
-
-.button-17:not(:disabled):focus {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-.button-17:not(:disabled):active {
-  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
-}
-
-.button-17:disabled {
-  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-}
-
-/* BTN CATEGORIE */
-
-.btn-3{
-  border: 2px solid rgb(103, 103, 103);
-  color:var(--v-color);
-  transition: 0.3s;
->>>>>>> b102694 (migliorie varie lato front)
-}
-
-.btn-3:hover {
-    font-size: 20px;
-}
-
-.bg-flash {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-<<<<<<< HEAD
-/* style table */
-.content-table {
-    width: 100vw;
-    background-color: #d3d8df;
-}
-.content-table thead tr {
-    background-color: rgb(238, 141, 15);
-    font-weight: bold;
-}
-.content-table thead tr th {
-    border-collapse: collapse;
-    padding: 20px;
-    font-size: 1.1em;
-}
-.content-table tbody tr {
-    padding-bottom: 10px;
-    border-bottom: 1px solid gray;
-}
-.content-table tbody {
-    width: 100%;
-}
-.content-table tbody tr {
-    width: 100%;
-}
-.content-table td:first-child {
-    width: 7%;
-}
-.content-table td:last-child {
-    font-weight: 700;
-    width: 20%;
-    border-left: 2px solid black;
-}
-.content-table td {
-    padding: 12px 15px;
-    width: 16%;
+#notification{
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 13px;
+    width: 18px;
+    height: 18px;
     text-align: center;
 }
-/* end style table */
-=======
+
+.bg-custom1{
+  background-color: var(--e-color);
+}
+
+
+
+
+
+/* BTN */
+
+
+.btn-outline-custom {
+  --bs-btn-color: var(--e-color);
+  --bs-btn-border-color: var(--e-color);
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: var(--e-color);
+  --bs-btn-hover-border-color: var(--e-color);
+  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: var(--e-color);
+  --bs-btn-active-border-color: var(--e-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--e-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--e-color);
+  --bs-gradient: none;
+}
+.btn-outline-custom1 {
+  --bs-btn-color: white;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: white;
+  --bs-btn-hover-border-color: white;
+  --bs-btn-focus-shadow-rgb: 13, 202, 240;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: white;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: white;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: white;
+  --bs-gradient: none;
+}
+
+.btn-outline-custom2 {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #6c757d;
+  --bs-btn-hover-color: #6c757d;
+  --bs-btn-bg: #6c757d;
+  --bs-btn-hover-border-color: #6c757d;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #6c757d;
+  --bs-btn-active-border-color: #6c757d;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #6c757d;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #6c757d;
+  --bs-gradient: none;
+}
+.btn-outline-refuse {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: red;
+  --bs-btn-hover-color: red;
+  --bs-btn-bg: red;
+  --bs-btn-hover-border-color: red;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: red;
+  --bs-btn-active-border-color: red;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: red;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: red;
+  --bs-gradient: none;
+}
+.btn-outline-accept {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: green;
+  --bs-btn-hover-color: green;
+  --bs-btn-bg: green;
+  --bs-btn-hover-border-color: green;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: green;
+  --bs-btn-active-border-color: green;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: green;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: green;
+  --bs-gradient: none;
+}
+/* BTN CATEGORIE */
+
+
 /* CARD ANNUNCI */
 
 .card-title{
@@ -275,13 +137,5 @@ body{
   font-size: 17px;
 }
 
-.car-1{
-  background: rgba(255, 255, 255, 0.16);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.8px);
-  -webkit-backdrop-filter: blur(9.8px);
-}
 
 
->>>>>>> b102694 (migliorie varie lato front)

@@ -2,6 +2,10 @@
     <x-header>
         {{$article->title}}
     </x-header>
+    <div class="container d-flex justify-content-center">
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+        <a class="btn btn-outline-custom" href="{{route('article.create')}}">Aggiungi articolo</a>
+    </div>
     <div class="container justify-content-around my-5">
         <div class="row align-items-center text-center">
             <div class="col-12 col-md-6">
@@ -32,13 +36,19 @@
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                <div class="ms-5">
-                    <h2 class="card-title mt-3">{{ $article->title }}</h2>
-                    <hr class="w-75 mx-auto">
-                    <h5 class="card-category m-2">{{ $article->category->name }}</h5>
-                    <p class="card-price m-2">€ {{ $article->price }}</p>
-                    <p class="description m-2">{{ $article->description }}</p>
-                    <a href="#" class="btn btn-3 mt-2">####</a>
+                <div>
+                    <div class="card-body">
+                        <h2 class="card-title mt-3">{{ $article->title }}</h2>
+                        <hr class="w-75 mx-auto">
+                        <p>Categoria:</p>
+                        <h5 class="card-category m-2">{{ $article->category->name }}</h5>
+                        <p>Prezzo:</p>
+                        <p class="card-price m-2">€ {{ $article->price }}</p>
+                        <p>Descrizione:</p>
+                        <p class="description fst-italic">{{ $article->description }}</p>
+                        <a href="#" class="btn btn-outline-custom">####</a>
+
+                    </div>
                 </div>
             </div>
         </div>

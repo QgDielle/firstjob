@@ -1,7 +1,8 @@
-<div>
+<div class="bg-custom1 p-2 rounded-2">
+  
   <form wire:submit.prevent='store'>
-    @csrf
     <x-messages />
+    @csrf
     <div class="mb-3">
       <label for="title" class="form-label @error('title') is-invalid @enderror">Titolo</label>
       <input wire:model.lazy='title' type="text" class="form-control" id="title">
@@ -11,9 +12,9 @@
     </div>
     <div class="mb-3">
       {{-- <label for="category" class="form-label">Seleziona Categorie</label> --}}
+      <label for="category" class="form-label">Seleziona categoria</label>
       <select wire:model.defer='category' id="category" class="form-select @error('category') is-invalid @enderror">
         
-        <option selected>Seleziona Categoria</option>
         @foreach ($categories as $category)
         <option value="{{$category->id}}">{{$category->name}}</option>
         @endforeach
@@ -38,7 +39,7 @@
       @enderror
     </div>
     
-    <button class="btn btn-2 p-2 w-25 mt-4 rounded-2" type="submit">inserisci annuncio</button>
+    <button class="btn btn-outline-light" type="submit">inserisci articolo</button>
     
   </form>
   

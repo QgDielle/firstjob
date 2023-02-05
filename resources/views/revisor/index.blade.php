@@ -1,12 +1,16 @@
 <x-layout>
 
     <x-header>
-        Lista articoli da rivisionare
+        Articoli da revisionare
     </x-header>
 
-    <a href="{{ route('revisor.recap') }}">Lista articoli recap</a>
-
-    <h1>{{ $article_to_check ? "Ecco l'ultimo annuncio da rivisionare" : 'Nessun articolo da rivisionare' }}</h1>
+    <div class="container d-flex justify-content-center">
+        <div>
+            <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+        </div>
+        <h1 class="text-center">{{ $article_to_check ? "Ultimo articolo da revisionare:" : 'Nessun articolo da rivisionare' }}</h1>
+    </div>
+    
 
     @if ($article_to_check)
         <div class="container justify-content-around my-5">
@@ -39,29 +43,29 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="container-fluid justify-content-center  ms-5">
-                        <img src="https://picsum.photos/350" alt="">
+                    <div class="container justify-content-center">
+                        {{-- <img src="https://picsum.photos/350" alt=""> --}}
                         <h2 class="card-title mt-3">{{ $article_to_check->title }}</h2>
                         <hr class="w-75 mx-auto">
                         <h5 class="m-2">{{ $article_to_check->category->name }}</h5>
                         <p class="m-2">€ {{ $article_to_check->price }}</p>
                         <p class="description m-2">{{ $article_to_check->description }}</p>
-                        <div>
-                            <a href="#" class="btn btn-2 mt-2">####</a>
+                        <div class="d-flex justify-content-center">
+                            <a href="#" class=" mx-2 btn btn-2 mt-2">####</a>
                             <form method="POST"
                                 action="{{ route('revisor.accept', ['article' => $article_to_check]) }}">
                                 @method('PATCH')
                                 @csrf
-                                <button type="submit" class="btn btn-success my-1">Accetta</button>
+                                <button type="submit" class=" mx-2 btn btn-outline-accept my-1">Accetta</button>
                             </form>
                             <form method="POST"
                                 action="{{ route('revisor.decline', ['article' => $article_to_check]) }}">
                                 @method('PATCH')
                                 @csrf
-                                <button type="submit" class="btn btn-danger my-1">Rifiuta</button>
+                                <button type="submit" class=" mx-2 btn btn-outline-refuse my-1">Rifiuta</button>
                             </form>
-                            <x-messages />
                         </div>
+                        <x-messages />
                     </div>
                 </div>
             </div>

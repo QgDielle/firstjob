@@ -14,10 +14,11 @@
 <body>
     <x-navbar />
     
-    <main class="min-vh-100">
+    <main class="">
         {{ $slot }}
     </main>
-
+    
+    <x-subnavbar />
     <x-footer />
     @livewireScripts
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>

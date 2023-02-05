@@ -1,56 +1,57 @@
-<nav class="blue navbar navbar-expand-md fixed-top ">
-    <div class="container-fluid fs-4">
-        <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
-        aria-controls="navbarsExample04" aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarsExample04">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('article.index')}}">Vai agli annunci</a>
-            </li>
-            @if (Auth::check() && Auth::user()->is_revisor)
-            <a class="nav-link active" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
-            <span class="text-white bg-danger">{{ App\Models\Article::toBeRevisionedCount() }}</span>
-            @endif
+<nav class="navbar navbar-expand-md bg-custom1 fixed-top">
+    <div class="container-fluid">
+        <div class="">
+            <a class="navbar-brand " href="{{route('welcome')}}">Presto.it</a>
             
-        </ul>
-        {{-- <form action="{{ route('article.search') }}" method="GET" class="d-flex" role="search">
-            <input name="searched" class="form-control me-2" type="search" placeholder="Search"
-            aria-label="Search">
-            <button class="btn btn-outline-seccess" type="submit">Ricerca</button>
-        </form> --}}
-        @auth
-        <li class="nav-item dropdown list-unstyled">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-            aria-expanded="false">Ciao {{Auth::user()->name}}</a>
-            <ul class="dropdown-menu navbar1">
-                <li><a class="dropdown-item" href="">Profilo</a></li>
-                <li><a class="dropdown-item" href=""
-                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-                </li>
-                <form id="form-logout" method="POST" class="d-none " action="{{ route('logout') }}">@csrf
-                </form>
-                <li><a class="dropdown-item" href="#">Annunci inseriti</a></li>
-            </ul>
-        </li>
-        @else
-        <div class="ciao bg-white p-1 rounded-3">
-            <li class="list-unstyled nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Registrati - Accedi</a>
-                <ul class="dropdown-menu navbar1">
-                    <li><a class="dropdown-item" href="{{ route('login') }}">Login</a></li>
-                    <li><a class="dropdown-item" href="{{ route('register') }}">Register</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
         </div>
+        <button class="btn btn-outline-custom1 border-1 border-white" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         
-        @endauth
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @if (Auth::check() && Auth::user()->is_revisor)
+                <li class="nav-item d-flex">
+                    <a class="btn btn-outline-custom1" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
+                    @if(App\Models\Article::toBeRevisionedCount())
+                    <span id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
+                    @endif
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-custom1" href="{{route('revisor.recap')}}">Articoli revisionati</a>
+                </li>
+                @endif
+                <li class="nav-item">
+                    <a class="btn btn-outline-custom1" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
+                </li>
+                
+                
+                @auth
+                <li class="nav-item dropdown list-unstyled me-3">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    aria-expanded="false">{{Auth::user()->name}} <i class="bi bi-person-lines-fill mx-1 fs-6 text-white"></i> </a>
+                    <ul class="dropdown-menu navbar1">
+                        <li><a class="dropdown-item" href="">Profilo</a></li>
+                        <li><a class="dropdown-item " href="{{route('article.create')}}">Inserisci annuncio</a></li>
+                    </ul>
+                </li>
+                @endauth
+            </ul>
+            @auth   
+            <div class="me-3">
+                <a class="btn btn-outline-refuse" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+            </div>
+            
+            <form id="form-logout" method="POST" class="d-none " action="{{ route('logout') }}">@csrf
+            </form> 
+            @else
+            <div class=" me-3">
+                <a class="btn btn-outline-light" href="{{route('login')}}">Login</a>
+                <a class="btn btn-outline-accept" href="{{route('register')}}">Registrati</a>
+            </div>
+            @endauth
     </div>
+    
 </div>
 </nav>

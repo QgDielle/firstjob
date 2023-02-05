@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 ">
 
-                <form method="POST" action="{{ route('login') }}">
+                <form class="bg-custom1 p-3 rounded-2" method="POST" action="{{ route('login') }}">
                     @csrf
                     <x-error />
                     <div class="mb-3">
@@ -18,8 +18,8 @@
                         <input name="password" type="password" class="form-control" id="password">
                     </div>
 
-                    <button type="submit" class="btn btn-2 p-2 w-25 mt-4 rounded-2">Login</button>
-                    <a class="btn btn-2 p-2 w-25 mt-4 rounded-2" href="{{route('register')}}">Registrati</a>
+                    <button type="submit" class="btn btn-outline-light">Login</button>
+                    <a class="btn btn-outline-accept" href="{{route('register')}}">Registrati</a>
                 </form>
             </div>
         </div>

@@ -41,10 +41,17 @@ class RevisorController extends Controller
 
         return redirect()->back()->with('successMessage', "Hai rifiutato l'articolo");
     }
+    public function revisor_suspend(Article $article)
+    {
+
+        $article->setAccepted(NULL);
+
+        return redirect()->back()->with('successMessage', "Hai sospeso l'articolo");
+    }
 
     public function revisor_recap()
     {
-        $articles_recap = Article::where('is_accepted', TRUE)->orWhere('is_accepted', FALSE)->get();
+        $articles_recap = Article::where('is_accepted', TRUE)->orWhere('is_accepted', FALSE)->orderBy('id', 'desc')->get();
 
         return view('revisor.recap', compact('articles_recap'));
     }
@@ -74,6 +81,6 @@ class RevisorController extends Controller
         $mail = Auth::user()->email;
         $user_message = $request->message;
         Mail::to($mail)->send(new RevisorRequestMail(Auth::user(), $user_message));
-        return redirect(route('welcome'));
+        return redirect(route('welcome'))->with('successMessage', 'Richiesta inviata con successo!');
     }
 }

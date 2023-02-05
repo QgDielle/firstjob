@@ -1,9 +1,13 @@
 <x-layout>
-    <x-subnavbar />
+    
     <x-header>
         Tutti gli articoli
     </x-header>
-   
+
+    <div class="container d-flex justify-content-center">
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+        <a class="btn btn-outline-custom" href="{{route('article.create')}}">Aggiungi articolo</a>
+    </div>
 
     <div class="container my-5">
         <div class="row">
@@ -17,7 +21,7 @@
                             <h5 class="card-category">{{ $article->category->name }}</h5>
                             <p class="card-price">€ {{ $article->price }}</p>
                             {{-- <p class="fs-italic">{{ $article->description }}</p> --}}
-                            <a href="{{ route('article.show', compact('article')) }}" class="btn button-17">Vai al
+                            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-outline-custom">Vai al
                                 dettaglio</a>
                         </div>
                     </div>

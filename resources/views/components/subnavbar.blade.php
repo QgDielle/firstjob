@@ -1,16 +1,21 @@
-<div class="sticky-top subnav ">
-    <ul class="d-flex justify-content-center mb-0 p-2">
-        @foreach ($categories as $category)
-        <li class="p-1 list-unstyled rounded-3"><a class="btn btn-3"
-            href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a>
-        </li>
-        @endforeach
-    </ul>
-</div>
-<div class="container-fluid mt-5">
-    <div class="row justify-content-center align-content-center h-50">
-        <div class="col-12 col-md-8">
-            <x-search />
+<nav class="bg-custom1 navbar  sticky-bottom"> 
+    <div class="container-fluid justify-content-center pt-2">   
+        
+        
+        {{-- <button class="btn btn-outline-custom1 border-1 border-white mb-2" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>     --}}
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample05">
+            <ul class="row justify-content-center p-0">
+                @foreach ($categories as $category)
+                <div class="col-3 col-md-1 me-3">
+                    
+                    <a class="btn btn-outline-custom1 mb-1"
+                    href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a>
+                    
+                </div>
+                @endforeach
+            </ul>
         </div>
+            
+        
     </div>
-</div>
+</nav>

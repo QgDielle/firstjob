@@ -1,79 +1,85 @@
 <x-layout>
-    {{-- @dd($articles_recap) --}}
-
-    {{-- @dd($articles_recap) --}}
     <x-header>
         Lista articoli revisionati
     </x-header>
-
-    <div class="container justify-content-around my-5">
-        <div class="row align-items-center text-center p-5">
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th>
-                            id
-                        </th>
-                        <th>
-                            photo
-                        </th>
-                        <th>
-                            title
-                        </th>
-                        <th>
-                            price
-                        </th>
-                        <th>
-                            name creator
-                        </th>
-                        <th>
-                            action
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($articles_recap as $article)
+    <div class="container d-flex justify-content-center">
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+    </div>
+    <div class="container-fluid my-5">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <table class="content-table table-bordered">
+                    <thead>
                         <tr>
-                            <td>
-                                <span>{{ $article->id }}</span>
-                            </td>
-                            <td>
-                                <img class="rounded-3" src="https://picsum.photos/50" alt="placeholder">
-                            </td>
-                            <td>
-                                <p>{{ $article->title }}</p>
-                            </td>
-                            <td>
-                                <p>{{ $article->price }}</p>
-                            </td>
-                            <td>
-                                <p>{{ $article->user->name }}</p>
-                            </td>
-                            <td>
-                                <div class="d-flex gap-5 w-100 justify-content-center">
-                                    @if ($article->is_accepted == false)
-                                        <form method="POST"
-                                            action="{{ route('revisor.accept', ['article' => $article]) }}">
-                                            @method('PATCH')
-                                            @csrf
-                                            <button type="submit" class="btn btn-success my-1">Reinserisci
-                                                articolo</button>
-                                        </form>
-                                    @else
-                                        <form method="POST"
-                                            action="{{ route('revisor.decline', ['article' => $article]) }}">
-                                            @method('PATCH')
-                                            @csrf
-                                            <button type="submit" class="btn btn-danger my-1">Rimuovi articolo</button>
-                                        </form>
-                                    @endif
-                                </div>
-                            </td>
-
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Name creator
+                            </th>
+                            <th class="m-0">
+                                Action
+                            </th>
                         </tr>
-                    @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        @foreach ($articles_recap as $article)
+                            <tr>
+                                <td>
+                                    <span class="m-0">{{ $article->id }}</span>
+                                </td>
+                                <td>
+                                    <p class="m-0">{{ $article->title }}</p>
+                                </td>
+                                <td>
+                                    <p class="m-0">{{ $article->category->name }}</p>
+                                </td>
+                                <td>
+                                    <p class="m-0">{{ $article->user->name }}</p>
+                                </td>
+                                <td>
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md-6">
+                                            <form method="POST"
+                                                action="{{ route('revisor.suspend', ['article' => $article]) }}">
+                                                @method('PATCH')
+                                                @csrf
+                                                <button type="submit" class="btn btn-outline-custom2">Sospendi</button>
+                                            </form>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            @if ($article->is_accepted == false)
+                                                <form method="POST"
+                                                    action="{{ route('revisor.accept', ['article' => $article]) }}">
+                                                    @method('PATCH')
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-outline-accept">Ripristina</button>
+                                                </form>
+                                            @else
+                                                <form method="POST"
+                                                    action="{{ route('revisor.decline', ['article' => $article]) }}">
+                                                    @method('PATCH')
+                                                    @csrf
+                                                    <button type="submit" class="btn btn-outline-refuse">Rimuovi</button>
+                                                </form>
+                                            @endif
+                                        </div>
+                                        
+                                       
+                                    </div>
+                                </td>
+    
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

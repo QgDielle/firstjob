@@ -33,6 +33,7 @@ Route::get("/revisor/index", [RevisorController::class, 'index'])->name('revisor
 //? ACCETTA / RIFIUTA articolo
 Route::patch('/revisor/accept/{article}', [RevisorController::class, 'revisor_accept'])->name('revisor.accept');
 Route::patch('/revisor/decline/{article}', [RevisorController::class, 'revisor_decline'])->name('revisor.decline');
+Route::patch('/revisor/suspend/{article}', [RevisorController::class, 'revisor_suspend'])->name('revisor.suspend');
 Route::get('/revisor/recap', [RevisorController::class, 'revisor_recap'])->name('revisor.recap');
 //?  LAVORA CON NOI
 Route::get('/revisor/request', [RevisorController::class, 'revisor_request'])->name('revisor.request');

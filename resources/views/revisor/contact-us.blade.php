@@ -17,7 +17,7 @@
                         <input type="checkbox" class="form-check-input" id="checkbox">
                         <label class="form-check-label" for="checkbox">diventa revisore</label>
                     </div>
-                    <button type="submit" class="btn btn-dark">invia richiesta</button>
+                    <button type="submit" class="btn btn-outline-custom">invia richiesta</button>
                 </form>
 
             </div>

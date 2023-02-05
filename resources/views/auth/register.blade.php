@@ -7,7 +7,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form method="POST" action="{{ route('register') }}">
+                <form class="bg-custom1 p-3 rounded-2" method="POST" action="{{ route('register') }}">
                     <x-error />
                     @csrf
                     {{-- email --}}
@@ -31,7 +31,8 @@
                         <input type="password" name="password_confirmation"class="form-control" id="password_confirmation" placeholder="Conferma la password">
                     </div>
 
-                    <button type="submit" class="btn btn-2 p-2 w-25 mt-4 rounded-2">Register</button>
+                    <button type="submit" class="btn btn-outline-accept">Register</button>
+                    <a class="btn btn-outline-light" href="{{route('login')}}">Accedi</a>
                 </form>
             </div>
         </div>
