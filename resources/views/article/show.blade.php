@@ -9,7 +9,7 @@
     <div class="container justify-content-around my-5">
         <div class="row align-items-center text-center">
             <div class="col-12 col-md-6">
-                @if ($article->images)
+                @if (count($article->images))
                     <div id="showCarousel" class="carousel slide " data-bs-ride="carousel">
                         <div class="carousel-inner">
                             @foreach ($article->images as $image)
@@ -32,7 +32,7 @@
 
                     </div>
                 @else
-                    <div id="showCarousel" class="carousel-slide " data-bs-ride="carousel">
+                    <div id="showCarousel" class="carousel slide " data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="https://picsum.photos/300" class="d-block w-100" alt="...">
