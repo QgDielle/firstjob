@@ -9,13 +9,13 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
+            <ul class="navbar-nav">
                 @if (Auth::check() && Auth::user()->is_revisor)
-                <li class="nav-item d-flex">
-                    <a class="btn btn-outline-custom1" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
+                <li class="nav-item d-flex position-relative">
+                    <a class="btn btn-outline-custom1 " aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
                     @if(App\Models\Article::toBeRevisionedCount())
-                    <span id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
                     @endif
                 </li>
                 <li class="nav-item">
@@ -25,8 +25,6 @@
                 <li class="nav-item">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
                 </li>
-                
-                
                 @auth
                 <li class="nav-item dropdown list-unstyled me-3">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
@@ -37,21 +35,24 @@
                     </ul>
                 </li>
                 @endauth
+                
+                
             </ul>
             @auth   
+            
             <div class="me-3">
-                <a class="btn btn-outline-refuse" href="" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                <a class="btn btn-outline-refuse" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
             </div>
             
             <form id="form-logout" method="POST" class="d-none " action="{{ route('logout') }}">@csrf
             </form> 
             @else
-            <div class=" me-3">
+            <div class="me-3">
                 <a class="btn btn-outline-light" href="{{route('login')}}">Login</a>
                 <a class="btn btn-outline-accept" href="{{route('register')}}">Registrati</a>
             </div>
             @endauth
+        </div>
+        
     </div>
-    
-</div>
 </nav>

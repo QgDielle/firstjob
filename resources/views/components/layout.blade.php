@@ -21,6 +21,16 @@
     <x-subnavbar />
     <x-footer />
     @livewireScripts
+    
+
+    <script>
+        const toggleButton = document.querySelector('#dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+          document.body.classList.toggle('dark-mode');
+        });
+    </script>
+    
+    
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 </body>
 

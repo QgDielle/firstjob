@@ -23,21 +23,17 @@ body{
 }
 
 #notification{
-    color: white;
-    background-color: red;
-    border-radius: 50%;
-    font-size: 13px;
-    width: 18px;
-    height: 18px;
-    text-align: center;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 4px;
 }
 
 .bg-custom1{
   background-color: var(--e-color);
 }
-
-
-
 
 
 /* BTN */
@@ -153,5 +149,13 @@ body{
   font-size: 17px;
 }
 
+/* BTN DARK MODE */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
 
+.btn-mod{
+  height: 300px;
+}
 
