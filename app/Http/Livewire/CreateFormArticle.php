@@ -6,24 +6,53 @@ use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class CreateFormArticle extends Component
 {
-    public $title, $description, $price, $category;
+    use WithFileUploads;
+
+    public $article;
+
+    public $images = [];
+
+    public $title, $description, $price, $category, $temporary_images;
+
+    public function updatedTemporaryImages(){
+        if ($this->validate(['temporary_images.*'=>'image|max:1024',]))
+        {
+            foreach($this->temporary_images as $image){
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
+        }
+    }
 
     public function store()
     {
         $this->validate();
-        $category = Category::find($this->category);
-        $category->articles()->create([
+
+        $this->article = Category::find($this->category)->articles()->create(
+            [
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'user_id' => Auth::user()->id,
         ]);
 
+        if(count($this->images)){
+            foreach ($this->images as $image){
+                $this->article->images()->create(['path'=>$image->store('images','public')]);
+            }
+        }
+
         $this->reset();
-        session()->flash('successMessage', 'Hai inserito correttamente il tuo annuncio');
+        session()->flash('successMessage', 'Hai inserito correttamente il tuo annuncio, sarà pubblicato dopo la revisione');
     }
 
     protected $rules = [
@@ -32,6 +61,8 @@ class CreateFormArticle extends Component
         'description' => 'required|min:3|max:2000',
         'category' => 'required',
         'price' => 'required|numeric',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024',
     ];
 
     protected $messages = [
@@ -45,6 +76,9 @@ class CreateFormArticle extends Component
         'category.required' => 'Seleziona la categoria',
         'price.required' => 'Inserisci il prezzo',
         'price.numeric' => 'Inserisci solo la cifra',
+        'images.*.max' => "L'immagine dev'essere massimo di 1Mb",
+        'temporary_images.*.max' => "L'immagine dev'essere massimo di 1Mb",
+
 
     ];
 
