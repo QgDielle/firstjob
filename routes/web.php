@@ -41,5 +41,8 @@ Route::get('/revisor/make/{user}', [RevisorController::class, 'revisor_make'])->
 Route::get("/revisor/contact-us", [RevisorController::class, 'revisor_contactus'])->name('revisor.contactus');
 Route::post("/revisor/submit", [RevisorController::class, 'revisor_submit'])->name('revisor.submit');
 
-//?
+//? RICERCA ANNUNCI
 Route::get("/ricerca/annuncio", [ArticleController::class, "searchArticle"])->name("article.search");
+
+//? CAMBIA LINGUA
+Route::post('/lingua/{lang}', [ArticleController::class, "setLanguage"])->name('set_language_locale');

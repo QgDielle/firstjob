@@ -23,12 +23,14 @@ body {
 }
 
 #notification{
-  color: white;
-  background-color: red;
-  border-radius: 50%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 4px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 13px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+  
 }
 
 .bg-custom1 {

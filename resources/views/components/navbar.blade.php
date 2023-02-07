@@ -11,14 +11,19 @@
         
         <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
             <ul class="navbar-nav">
+                <x-_locale lang="it" />
+                <x-_locale lang="en" />
+                <x-_locale lang="es" /> 
+                
+
                 @if (Auth::check() && Auth::user()->is_revisor)
-                <li class="nav-item d-flex position-relative">
-                    <a class="btn btn-outline-custom1 " aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
+                <li class="nav-item d-flex">
+                    <a class="btn btn-outline-custom1" aria-current="page" href="{{ route('revisor.index') }}">Revisione</a>
                     @if(App\Models\Article::toBeRevisionedCount())
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
+                    <span id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
                     @endif
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a class="btn btn-outline-custom1 me-1" href="{{route('revisor.recap')}}">Articoli revisionati</a>
                 </li>
                 @endif

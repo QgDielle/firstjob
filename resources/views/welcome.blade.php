@@ -19,8 +19,8 @@
                 </div>
                 
                 <div class="d-flex flex-column border-0 rounded-2 p-2 bg-custom1">
-                    <h4 class=" mb-3 text-center display-6">Il tuo annuncio in due semplici passaggi</h4>
-                    <a class="btn btn-outline-light mx-auto fs-5" href="{{route('article.create')}}">Inizia subito</a>
+                    <h4 class=" mb-3 text-center display-6">{{__('ui.insertHome')}}</h4>
+                    <a class="btn btn-outline-light mx-auto fs-5" href="{{route('article.create')}}">{{__('ui.insertButton')}}</a>
                 </div>
                 
             </div>
@@ -30,7 +30,7 @@
     {{-- ARTICLES --}}
     
     <div class="container-fluid bg-custom1 rounded-2">
-        <h4 class="text-center mt-5 display-2 p-3">Ultimi articoli</h4>
+        <h4 class="text-center mt-5 display-2 p-3">{{__('ui.allArticles')}}</h4>
     </div>
     <div class="container-fluid">
         <div class="container">
