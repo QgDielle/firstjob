@@ -11,8 +11,7 @@
         <h1 class="text-center">
             {{ $article_to_check ? 'Ultimo articolo da revisionare:' : 'Nessun articolo da rivisionare' }}</h1>
     </div>
-
-
+    
     @if ($article_to_check)
         <div class="container justify-content-around my-5">
             <div class="row align-items-center text-center">
