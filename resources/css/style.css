@@ -22,15 +22,6 @@ body {
     background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
-#notification{
-  color: white;
-  background-color: red;
-  border-radius: 50%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 4px;
-=======
 #notification {
     color: white;
     background-color: red;
@@ -39,19 +30,15 @@ body {
     width: 18px;
     height: 18px;
     text-align: center;
->>>>>>> origin/main
 }
 
 .bg-custom1 {
     background-color: var(--e-color);
 }
 
-<<<<<<< HEAD
-=======
 .img-preview {
     width: 300px;
 }
->>>>>>> origin/main
 
 /* BTN */
 
@@ -163,7 +150,6 @@ body {
     font-style: italic;
     font-size: 17px;
 }
-<<<<<<< HEAD
 
 /* BTN DARK MODE */
 body.dark-mode {
@@ -175,5 +161,3 @@ body.dark-mode {
   height: 300px;
 }
 
-=======
->>>>>>> origin/main

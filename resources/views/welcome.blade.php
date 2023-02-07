@@ -33,12 +33,14 @@
         <h4 class="text-center mt-5 display-2 p-3">Ultimi articoli</h4>
     </div>
     <div class="container-fluid">
+        <div class="container">
+
+       
         <div class="row my-3">
             @foreach ($articles as $article)
             <div class="col-12 col-md-3">
                 <div class="card my-5 mx-3 shadow border-0">
-                    
-                    <img src="https://picsum.photos/300" class="card-img-top" alt="{{ $article->title }}">
+                    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,450) : 'https://picsum.photos/300'}}" class="card-img-top" alt="">
                     <div class="card-body ">
                         <h5 class="card-name">{{ $article->category->name }}</h5>
                         <hr>
@@ -54,7 +56,7 @@
             @endforeach
         </div>
     </div>
-    
+  </div>   
     
     
 </x-layout>
