@@ -28,33 +28,35 @@
     </div>
     
     {{-- ARTICLES --}}
-
+    
     <div class="container-fluid bg-custom1 rounded-2">
         <h4 class="text-center mt-5 display-2 p-3">Ultimi articoli</h4>
     </div>
     <div class="container-fluid">
-        <div class="row my-3">
-            @foreach ($articles as $article)
-            <div class="col-12 col-md-3">
-                <div class="card my-5 mx-3 shadow border-0">
-                    
-                    <img src="https://picsum.photos/300" class="card-img-top" alt="{{ $article->title }}">
-                    <div class="card-body ">
-                        <h5 class="card-name">{{ $article->category->name }}</h5>
-                        <hr>
-                        <h5 class="card-title">{{ $article->title }}</h5>
-                        <p class="card-price">€ {{ $article->price }}</p>
-                        {{-- <p class="card-text">{{ $article->description }}</p> --}}
-                        <div class="d-flex justify-content-end">
-                            <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
+        <div class="container">
+            
+            
+            <div class="row my-3">
+                @foreach ($articles as $article)
+                <div class="col-12 col-md-3">
+                    <div class="card my-5 mx-3 shadow border-0">
+                        <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,450) : 'https://picsum.photos/300'}}" class="card-img-top" alt="">
+                        <div class="card-body ">
+                            <h5 class="card-name">{{ $article->category->name }}</h5>
+                            <hr>
+                            <h5 class="card-title">{{ $article->title }}</h5>
+                            <p class="card-price">€ {{ $article->price }}</p>
+                            {{-- <p class="card-text">{{ $article->description }}</p> --}}
+                            <div class="d-flex justify-content-end">
+                                <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
-    </div>
-    
+    </div>   
     
     
 </x-layout>
