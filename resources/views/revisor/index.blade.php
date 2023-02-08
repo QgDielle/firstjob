@@ -1,5 +1,4 @@
 <x-layout>
-
     <x-header>
         Articoli da revisionare
     </x-header>
@@ -11,7 +10,7 @@
         <h1 class="text-center">
             {{ $article_to_check ? 'Ultimo articolo da revisionare:' : 'Nessun articolo da rivisionare' }}</h1>
     </div>
-    
+
     @if ($article_to_check)
         <div class="container justify-content-around my-5">
             <div class="row align-items-center text-center">
@@ -89,6 +88,25 @@
                                 <button type="submit" class=" mx-2 btn btn-outline-refuse my-1">Rifiuta</button>
                             </form>
                         </div>
+                        @if (count($article_to_check->images))
+                            @foreach ($article_to_check->images as $image)
+                                <div class="card-body">
+                                    <h5 class="tx-accent">Revisione immagini</h5>
+                                    <p>Adulti <span class="{{ $image->adult }}"></span></p>
+                                    <p>Satira <span class="{{ $image->spoof }}"></span></p>
+                                    <p>Medicina <span class="{{ $image->medical }}"></span></p>
+                                    <p>Violenza <span class="{{ $image->violence }}"></span></p>
+                                    <p>Contenuto spinto <span class="{{ $image->racy }}"></span></p>
+                                </div>
+                            @endforeach
+                            <div class="card-text">
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        <p class="d-inline">{{ $label }},</p>
+                                    @endforeach
+                                @endif
+                            </div>
+                        @endif
                         <x-messages />
                     </div>
                 </div>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -20,16 +22,17 @@ class CreateFormArticle extends Component
 
     public $title, $description, $price, $category, $temporary_images;
 
-    public function updatedTemporaryImages(){
-        if ($this->validate(['temporary_images.*'=>'image|max:1024',]))
-        {
-            foreach($this->temporary_images as $image){
+    public function updatedTemporaryImages()
+    {
+        if ($this->validate(['temporary_images.*' => 'image|max:1024',])) {
+            foreach ($this->temporary_images as $image) {
                 $this->images[] = $image;
             }
         }
     }
 
-    public function removeImage($key){
+    public function removeImage($key)
+    {
         if (in_array($key, array_keys($this->images))) {
             unset($this->images[$key]);
         }
@@ -41,23 +44,25 @@ class CreateFormArticle extends Component
 
         $this->article = Category::find($this->category)->articles()->create(
             [
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price,
-            'user_id' => Auth::user()->id,
-        ]);
+                'title' => $this->title,
+                'description' => $this->description,
+                'price' => $this->price,
+                'user_id' => Auth::user()->id,
+            ]
+        );
 
-        if(count($this->images)){
-            foreach ($this->images as $image){
+        if (count($this->images)) {
+            foreach ($this->images as $image) {
                 // $this->article->images()->create(['path'=>$image->store('images','public')]);
                 $newFileName = "article/{$this->article->id}";
-                $newImage = $this->article->images()->create(['path'=>$image->store($newFileName , 'public')]);
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-                dispatch(new ResizeImage($newImage->path , 300 , 450));
+                dispatch(new ResizeImage($newImage->path, 300, 450));
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-
         }
 
         $this->reset();

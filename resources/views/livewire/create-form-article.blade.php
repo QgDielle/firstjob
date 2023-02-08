@@ -16,6 +16,7 @@
             <select wire:model.defer='category' id="category"
                 class="form-select @error('category') is-invalid @enderror">
 
+                <option value="">...</option>
                 @foreach ($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
