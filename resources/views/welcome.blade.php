@@ -1,41 +1,41 @@
 <x-layout>
-    
-    
-    <button type="button" class="btn btn-dark h-25 mt-5 p-2 align-content-center" id="dark-mode-toggle">Modalità scura</button>
-    
-    
+
+
+    {{-- <button type="button" class="btn btn-dark h-25 mt-5 align-content-center" id="dark-mode-toggle">Modalità scura</button> --}}
+
+
     <div class="container-fluid sfondo-1 vh-100">
-        
+
         <x-messages />
-        
-        <div class="row justify-content-center align-content-center h-100">
-            
-            <div class="col-md-4">
+
+        <div class="row justify-content-center align-content-center h-75">
+
+            <div class="col-md-6">
             </div>
-            
+
             <div class="col-12 col-md-3">
                 <div class="d-flex justify-content-center">
-                    <img style="width: 350px" class="" src="/media/presto-it-logo.png" alt="">
+                    <img style="width: 300px" class="" src="/media/presto-it-logo.png" alt="">
                 </div>
-                
+
                 <div class="d-flex flex-column border-0 rounded-2 p-2 bg-custom1">
                     <h4 class=" mb-3 text-center display-6">{{__('ui.insertHome')}}</h4>
                     <a class="btn btn-outline-light mx-auto fs-5" href="{{route('article.create')}}">{{__('ui.insertButton')}}</a>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
     {{-- ARTICLES --}}
-    
+
     <div class="container-fluid bg-custom1 rounded-2">
-        <h4 class="text-center mt-5 display-2 p-3">{{__('ui.allArticles')}}</h4>
+        <h4 class="text-center mt-5 display-2 p-3 text-white">{{__('ui.allArticles')}}</h4>
     </div>
     <div class="container-fluid">
         <div class="container">
-            
-            
+
+
             <div class="row my-3">
                 @foreach ($articles as $article)
                 <div class="col-12 col-md-3">
@@ -56,7 +56,7 @@
                 @endforeach
             </div>
         </div>
-    </div>   
-    
-    
+    </div>
+
+
 </x-layout>

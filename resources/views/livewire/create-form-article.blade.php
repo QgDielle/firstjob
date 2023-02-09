@@ -1,4 +1,4 @@
-<div class="bg-custom1 p-2 rounded-2">
+<div class="bg-custom1 p-5 rounded-2">
 
     <form wire:submit.prevent='store'>
         <x-messages />

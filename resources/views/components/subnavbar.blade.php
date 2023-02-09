@@ -1,7 +1,11 @@
-<nav class="bg-custom1 navbar  sticky-bottom"> 
-    <div class="container-fluid justify-content-center pt-2">   
-        
-        <div class="container px-5">
+<nav class="bg-custom1 navbar  sticky-bottom">
+    <div class="container-fluid justify-content-center pt-2">
+
+        <div class="container d-flex align-items-center">
+            <div>
+                <button class="btn btn-outline-custom1 border-1 border-white" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
+            </div>
+
             <x-search />
 
         </div>
@@ -9,15 +13,15 @@
             <ul class="row justify-content-center p-0">
                 @foreach ($categories as $category)
                 <div class="col-3 col-md-1 me-3">
-                    
+
                     <a class="btn btn-outline-custom1 mb-1"
                     href="{{route('category.show', compact('category'))}}">{{ $category->name }}</a>
-                    
+
                 </div>
                 @endforeach
             </ul>
         </div>
-            
-        
+
+
     </div>
 </nav>

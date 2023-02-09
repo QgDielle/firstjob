@@ -2,19 +2,19 @@
     <div class="container-fluid">
         <div class="">
             <a class="navbar-brand " href="{{route('welcome')}}">Presto.it</a>
-            
+
         </div>
-        <button class="btn btn-outline-custom1 border-1 border-white me-1" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
+        {{-- <button class="btn btn-outline-custom1 border-1 border-white me-1" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse justify-content-between " id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <x-_locale lang="it" />
                 <x-_locale lang="en" />
-                <x-_locale lang="es" /> 
-                
+                <x-_locale lang="es" />
+
 
                 @if (Auth::check() && Auth::user()->is_revisor)
                 <li class="nav-item d-flex">
@@ -24,7 +24,7 @@
                     @endif
                 </li>
                 <li class="nav-item ">
-                    <a class="btn btn-outline-custom1 me-1" href="{{route('revisor.recap')}}">Articoli revisionati</a>
+                    <a class="btn btn-outline-custom1 " href="{{route('revisor.recap')}}">Articoli revisionati</a>
                 </li>
                 @endif
                 <li class="nav-item">
@@ -40,17 +40,17 @@
                     </ul>
                 </li>
                 @endauth
-                
-                
+
+
             </ul>
-            @auth   
-            
+            @auth
+
             <div class="me-3">
                 <a class="btn btn-outline-refuse" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
             </div>
-            
+
             <form id="form-logout" method="POST" class="d-none " action="{{ route('logout') }}">@csrf
-            </form> 
+            </form>
             @else
             <div class="me-3">
                 <a class="btn btn-outline-light" href="{{route('login')}}">Login</a>
@@ -58,6 +58,6 @@
             </div>
             @endauth
         </div>
-        
+
     </div>
 </nav>
