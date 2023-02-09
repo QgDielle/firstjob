@@ -15,7 +15,7 @@
             
             <div class="col-12 col-md-3">
                 <div class="d-flex justify-content-center">
-                    <img style="width: 350px" class="" src="/media/presto.it-logo.png" alt="">
+                    <img style="width: 350px" class="" src="/media/presto-it-logo.png" alt="">
                 </div>
                 
                 <div class="d-flex flex-column border-0 rounded-2 p-2 bg-custom1">

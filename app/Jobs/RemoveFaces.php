@@ -65,7 +65,13 @@ class RemoveFaces implements ShouldQueue
             $h = $bounds[2][1] - $bounds[0][1];
 
             $image = SpatieImage::load($srcPath);
+            
+                    // LOGO
+            
 
+
+
+                // FACE
             $image->watermark(base_path('public/bg/smile.png'))
                 ->watermarkPosition('top-left')
                 ->watermarkPadding($bounds[0][0], $bounds[0][1])

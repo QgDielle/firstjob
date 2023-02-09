@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Jobs;
-
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
@@ -66,6 +65,8 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $i->spoof = $likelihoodName[$spoof];
         $i->violence = $likelihoodName[$violence];
         $i->racy = $likelihoodName[$racy];
+
+        
 
         $i->save();
     }
