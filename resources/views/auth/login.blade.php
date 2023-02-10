@@ -11,7 +11,8 @@
                     <x-error />
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input name="email" type="email" class="form-control" id="email" value="{{old('email')}}">
+                        <input name="email" type="email" class="form-control" id="email"
+                            value="{{ old('email') }}">
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
@@ -19,7 +20,8 @@
                     </div>
 
                     <button type="submit" class="btn btn-outline-light">Login</button>
-                    <a class="btn btn-outline-accept" href="{{route('register')}}">Registrati</a>
+                    <a class="border-2 border-bottom  text-white ms-3 text-decoration-none pb-1"
+                        href="{{ route('register') }}">Registrati</a>
                 </form>
             </div>
         </div>
