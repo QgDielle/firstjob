@@ -3,10 +3,10 @@
     <x-header>
         Inserisci il tuo articolo
     </x-header>
-    
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
                 @livewire('create-form-article')
             </div>
         </div>

@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&family=Nunito&display=swap");
 
 :root {
-    --pr-color: #0E71B8;
-    --v-color: #85C446;
-    --r-color: #033D74;
-    --b-color: #82E4FF;
+    --pr-color: #0e71b8;
+    --v-color: #85c446;
+    --r-color: #033d74;
+    --b-color: #82e4ff;
     --l-color: #a954dd;
 }
 
-.tx-p{
-    color: #033D74;
+.tx-p {
+    color: #033d74;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
     background-repeat: no-repeat;
 }
 
-#notification{
+#notification {
     color: white;
     background-color: red;
     border-radius: 50%;
@@ -33,7 +33,6 @@ body {
     width: 18px;
     height: 18px;
     text-align: center;
-
 }
 
 .bg-custom1 {
@@ -41,7 +40,7 @@ body {
 }
 
 .img-preview {
-    width: 300px;
+    width: 200px;
 }
 
 /* BTN */
@@ -157,25 +156,24 @@ body {
 
 /* BTN DARK MODE */
 body.dark-mode {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
-.btn-mod{
-  height: 300px;
+.btn-mod {
+    height: 300px;
 }
-
 
 /* nuova card */
 .cardBody {
-text-align: center;
-padding: 30px;
-background: #f8f4f2;
-font-family: Arial;
+    text-align: center;
+    padding: 30px;
+    background: #f8f4f2;
+    font-family: Arial;
 }
 .a-box {
-width: 240px;
-text-align: center;
+    width: 240px;
+    text-align: center;
 }
 
 .img-container {
@@ -206,19 +204,22 @@ text-align: center;
 }
 
 .text-container {
-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-padding: 120px 20px 20px 20px;
-border-radius: 20px;
-background: #fff;
-margin: -120px 0px 0px 0px;
-line-height: 19px;
-font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 120px 20px 20px 20px;
+    border-radius: 20px;
+    background: #fff;
+    margin: -120px 0px 0px 0px;
+    line-height: 19px;
+    font-size: 14px;
 }
 
 .text-container h3 {
-margin: 20px 0px 10px 0px;
-color: var(--r-color);
-font-size: 20px;
+    margin: 20px 0px 10px 0px;
+    color: var(--r-color);
+    font-size: 20px;
 }
 
-  
+.img-preview-card {
+    height: 230px;
+    width: 230px;
+}

@@ -107,6 +107,7 @@ class CreateFormArticle extends Component
 
     public function render()
     {
-        return view('livewire.create-form-article');
+        $categoryName = Category::find($this->category);
+        return view('livewire.create-form-article', compact("categoryName"));
     }
 }
