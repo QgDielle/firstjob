@@ -1,11 +1,11 @@
 <x-layout>
-    
+
     <x-header>
         Tutti gli articoli
     </x-header>
 
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"> Torna Indietro</i></a>
         <a class="btn btn-outline-custom-r" href="{{route('article.create')}}">Aggiungi articolo</a>
     </div>
     <div class="container-fluid">
@@ -30,7 +30,7 @@
                                 <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 @empty
@@ -43,8 +43,8 @@
                 </div>
             </div>
         </div>
-        
-    </div> 
+
+    </div>
     {{-- <div class="container my-5">
         <div class="row">
             @forelse ($articles as $article)

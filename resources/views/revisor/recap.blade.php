@@ -3,7 +3,7 @@
         Lista articoli revisionati
     </x-header>
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace">Torna indietro</i></a>
     </div>
     <div class="container-fluid my-5">
         <div class="container">
@@ -66,15 +66,15 @@
                                                     action="{{ route('revisor.decline', ['article' => $article]) }}">
                                                     @method('PATCH')
                                                     @csrf
-                                                    <button type="submit" class="btn btn-outline-refuse">Rimuovi</button>
+                                                    <button type="submit" class="btn btn-outline-danger">Rimuovi</button>
                                                 </form>
                                             @endif
                                         </div>
-                                        
-                                       
+
+
                                     </div>
                                 </td>
-    
+
                             </tr>
                         @endforeach
                     </tbody>

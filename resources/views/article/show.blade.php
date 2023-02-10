@@ -3,7 +3,7 @@
         {{ $article->title }}
     </x-header>
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{ url()->previous() }}"><i class="bi bi-backspace"></i></a>
+        <a class="btn btn-outline-refuse me-2" href="{{ url()->previous() }}"> <i class="bi bi-backspace"> Torna Indietro</i></a>
         <a class="btn btn-outline-custom-r" href="{{ route('article.create') }}">Aggiungi articolo</a>
     </div>
     <div class="container justify-content-around my-5">
