@@ -8,8 +8,44 @@
         <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"></i></a>
         <a class="btn btn-outline-custom-r" href="{{route('article.create')}}">Aggiungi articolo</a>
     </div>
-
-    <div class="container my-5">
+    <div class="container-fluid">
+        <div class="container justify-content-center my-5">
+            <div class="row ">
+                @forelse ($articles as $article)
+                <div class="col-12 col-md-6 col-lg-3 my-3">
+                    <div class="a-box mx-auto">
+                        <div class="img-container">
+                            <div class="img-inner">
+                                <div class="inner-skew">
+                                    <img src="{{!$article->images()->get()->isEmpty() ? $article->images()->first()->getUrl(300,450) : 'https://picsum.photos/300'}}" class="card-img-top" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-container">
+                            <h3 class="card-title">{{ $article->title }}</h3>
+                            <div>
+                                <p class="card-price">€ {{ $article->price }}</p>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                @empty
+                <div>
+                    <h2 class="text-center">La ricerca non ha generato nessun risultato</h2>
+                </div>
+                @endforelse
+                <div class="d-flex justify-content-center">
+                    {{ $articles->links() }}
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+    {{-- <div class="container my-5">
         <div class="row">
             @forelse ($articles as $article)
                 <div class="col-12 col-md-3 my-3">
@@ -20,7 +56,6 @@
                             <hr>
                             <h5 class="card-category">{{ $article->category->name }}</h5>
                             <p class="card-price">€ {{ $article->price }}</p>
-                            {{-- <p class="fs-italic">{{ $article->description }}</p> --}}
                             <a href="{{ route('article.show', compact('article')) }}" class="btn btn-outline-custom">Vai al
                                 dettaglio</a>
                         </div>
@@ -35,6 +70,6 @@
                 {{ $articles->links() }}
             </div>
         </div>
-    </div>
+    </div> --}}
 
 </x-layout>
