@@ -39,11 +39,11 @@
                         <p class="nav-link text-white" href="#">{{ __('ui.hello') }} {{ Auth::user()->name }} <i
                                 class="bi bi-person-lines-fill mx-1 fs-6 text-white"></i> </p>
                     </li>
-                @endauth
-                <li class="nav-item py-3 py-md-0">
+                    <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
                         href="{{ route('article.profile', ['user_id' => auth()->id()]) }}">Profilo</a>
                 </li>
+                @endauth
             </ul>
             <div class=" d-flex flex-fill justify-content-end">
 
