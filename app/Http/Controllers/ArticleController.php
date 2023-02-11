@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Laravel\Scout\Searchable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -37,6 +38,9 @@ class ArticleController extends Controller
 
     public function article_profile($user_id)
     {
+        if (Auth::user()->id != $user_id) {
+            return redirect(route("welcome"))->with("errorMessage", "Non sei il propietario");
+        }
         $articles = Article::where('user_id', "=", $user_id)->where('is_accepted', true)->get();
         return view("article.profile", compact("articles"));
     }
@@ -105,6 +109,8 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->images()->delete();
+        $article->delete();
+        return redirect(route("welcome"))->with("successMessage", "Articolo eleminato");
     }
 }

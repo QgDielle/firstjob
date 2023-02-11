@@ -25,6 +25,7 @@ Route::get('/article/create', [ArticleController::class, 'create'])->name('artic
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/profile/{user_id}', [ArticleController::class, 'article_profile'])->name('article.profile');
+Route::delete('/article/delete/{article}', [ArticleController::class, 'destroy'])->name('article.delete');
 
 
 //? CATEGORIE

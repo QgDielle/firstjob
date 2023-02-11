@@ -6,10 +6,8 @@
 
     <div class="container-fluid sfondo-1 vh-100">
 
-        <x-messages />
-
         <div class="row justify-content-center align-content-center h-75">
-
+            <x-messages />
             <div class="col-md-6">
             </div>
 
@@ -29,7 +27,6 @@
     </div>
 
     {{-- ARTICLES --}}
-
     <div class="container-fluid bg-custom1 rounded-2">
         <h4 class="text-center mt-5 display-2 p-3 text-white">{{ __('ui.allArticles') }}</h4>
     </div>

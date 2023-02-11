@@ -1,16 +1,19 @@
 <div class="container-fluid my-3 p-2 px-5 rounded-2 px-md-2" wire:poll>
     <div class="row justify-content-around">
-        <div class=" d-none d-xl-flex col-12 col-md-4 justify-content-center align-items-center">
+        {{-- <div class=" d-none d-xl-flex col-12 col-md-4 justify-content-center align-items-center">
             <div class="card w-75 p-3 my-5 mx-3 shadow border-0 rounded-5">
                 <p> {{ __('ui.preview') }} card:</p>
                 @if (!empty($images))
-                    <div class="m-1 img-preview-card mx-auto">
-                        <div class="my-3">
-                            <div class=""><img class="card-img-top" src="{{ $images[0]->temporaryUrl() }}"
-                                    alt="">
+
+                    @if ($images[0])
+                        <div class="m-1 img-preview-card mx-auto">
+                            <div class="my-3">
+                                <div class=""><img class="card-img-top" src="{{ $images[0]->temporaryUrl() }}"
+                                        alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                 @else
                     <div class="shadow m-1 bg-light border border-1 img-preview-card d-block mx-auto">
                         <p class="text-center"> {{ __('ui.noPhoto') }}</p>
@@ -33,7 +36,7 @@
                     <a class="btn btn-outline-custom" href="#"> {{ __('ui.detail') }}</a>
                 </div>
             </div>
-            {{-- <div class="card my-5 mx-3 shadow border-0">
+            <div class="card my-5 mx-3 shadow border-0">
                 <img src="{{ !$article->images()->get()->isEmpty()? $article->images()->first()->getUrl(300, 450): 'https://picsum.photos/300/450' }}"
                     class="card-img-top" alt="">
                 <div class="card-body ">
@@ -50,15 +53,16 @@
                             href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
                     </div>
                 </div>
-            </div> --}}
-        </div>
-        <div class="col-12 col-md-7 bg-custom1">
+            </div>
+        </div> --}}
+        <div class="col-12 col-md-9 bg-custom1">
 
             <form class="p-2" wire:submit.prevent='store'>
                 <x-messages />
                 @csrf
                 <div class="mb-3">
-                    <label for="title" class="form-label @error('title') is-invalid @enderror"> {{ __('ui.title') }}</label>
+                    <label for="title" class="form-label @error('title') is-invalid @enderror">
+                        {{ __('ui.title') }}</label>
                     <input wire:model.lazy='title' type="text" class="form-control" id="title">
                     @error('title')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
@@ -81,8 +85,8 @@
                     @enderror
                 </div>
                 @error('images.*')
-                <span class="fst-italic small text-danger">{{ $message }}</span>
-            @enderror
+                    <span class="fst-italic small text-danger">{{ $message }}</span>
+                @enderror
                 {{-- temporary_images --}}
                 @if (!empty($images))
                     <div class="row">
@@ -96,7 +100,8 @@
                                                 alt="">
                                             <button type="button"
                                                 class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                                wire:click="removeImage({{ $key }})"> {{ __('ui.delete') }}</button>
+                                                wire:click="removeImage({{ $key }})">
+                                                {{ __('ui.delete') }}</button>
                                         </div>
                                     </div>
                                 @endforeach
@@ -106,8 +111,8 @@
                 @endif
                 {{-- input images --}}
                 <div class="mb-3">
-                    <label for="temporary_images"
-                        class="form-label @error('temporary_images') is-invalid @enderror"> {{ __('ui.img') }}</label>
+                    <label for="temporary_images" class="form-label @error('temporary_images') is-invalid @enderror">
+                        {{ __('ui.img') }}</label>
                     <input wire:model.lazy='temporary_images' type="file" multiple class="form-control"
                         id="temporary_images" placeholder="seleziona immagine">
                     @error('temporary_images')
@@ -116,15 +121,16 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="description"
-                        class="form-label @error('description') is-invalid @enderror"> {{ __('ui.description') }}</label>
+                    <label for="description" class="form-label @error('description') is-invalid @enderror">
+                        {{ __('ui.description') }}</label>
                     <textarea wire:model.lazy='description' class="form-control" id="description" rows="7" cols="30"></textarea>
                     @error('description')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="price" class="form-label @error('price') is-invalid @enderror"> {{ __('ui.price') }}</label>
+                    <label for="price" class="form-label @error('price') is-invalid @enderror">
+                        {{ __('ui.price') }}</label>
                     <input wire:model.lazy='price' type="number" class="form-control" id="price">
                     @error('price')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
