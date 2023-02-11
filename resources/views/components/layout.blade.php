@@ -18,7 +18,7 @@
     <x-navbar />
 
 
-    <main class="">
+    <main class="min-vh-100">
         {{ $slot }}
     </main>
     <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">

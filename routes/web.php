@@ -24,6 +24,8 @@ Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/profile/{user_id}', [ArticleController::class, 'article_profile'])->name('article.profile');
+
 
 //? CATEGORIE
 Route::get("/category/name/{category}", [CategoryController::class, "show"])->name("category.show");

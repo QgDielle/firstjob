@@ -11,8 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item py-3 py-md-0">
-                    <a class="btn btn-outline-custom1 me-1" aria-current="page"
-                        href="{{ route('welcome') }}">Home</a>
+                    <a class="btn btn-outline-custom1 me-1" aria-current="page" href="{{ route('welcome') }}">Home</a>
                 </li>
                 <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
@@ -27,7 +26,8 @@
                         @endif
                     </li>
                     <li class="nav-item ">
-                        <a class="btn btn-outline-custom1 " href="{{ route('revisor.recap') }}">{{ __('ui.reviewedArticles') }}</a>
+                        <a class="btn btn-outline-custom1 "
+                            href="{{ route('revisor.recap') }}">{{ __('ui.reviewedArticles') }}</a>
                     </li>
                 @endif
                 <li class="nav-item py-3 py-md-0">
@@ -40,13 +40,18 @@
                                 class="bi bi-person-lines-fill mx-1 fs-6 text-white"></i> </p>
                     </li>
                 @endauth
+                <li class="nav-item py-3 py-md-0">
+                    <a class="btn btn-outline-custom1 me-1" aria-current="page"
+                        href="{{ route('article.profile', ['user_id' => auth()->id()]) }}">Profilo</a>
+                </li>
             </ul>
             <div class=" d-flex flex-fill justify-content-end">
 
 
-                 @auth
-                <a class="btn btn-outline-light  rounded-pill me-3 fw-bold  fs-md-5  "
-                    href="{{ route('article.create') }}"><i class="bi bi-plus-circle me-2"></i>{{ __('ui.addArticle') }}</a>
+                @auth
+                    <a class="btn btn-outline-light  rounded-pill me-3 fw-bold  fs-md-5  "
+                        href="{{ route('article.create') }}"><i
+                            class="bi bi-plus-circle me-2"></i>{{ __('ui.addArticle') }}</a>
 
 
                     <div class="me-3">

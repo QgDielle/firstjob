@@ -35,6 +35,12 @@ class ArticleController extends Controller
         return redirect()->back();
     }
 
+    public function article_profile($user_id)
+    {
+        $articles = Article::where('user_id', "=", $user_id)->where('is_accepted', true)->get();
+        return view("article.profile", compact("articles"));
+    }
+
 
     /**
      * Show the form for creating a new resource.
