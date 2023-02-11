@@ -155,10 +155,10 @@
 }
 
 /* BTN DARK MODE */
-body.dark-mode {
+/* body.dark-mode {
     background-color: black;
     color: white;
-}
+} */
 
 .btn-mod {
     height: 300px;
@@ -397,4 +397,12 @@ body.dark-mode {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 35px;
     text-transform: uppercase;
+}
+.mission-style{
+    color: var(--r-color);
+    font-size: 25px;
+    justify-content: center;
+}
+p{
+    color: black !important;
 }
