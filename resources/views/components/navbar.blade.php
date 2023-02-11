@@ -62,7 +62,7 @@
                             href="{{ route('login') }}">{{ __('ui.login|register') }}</a>
                     </div>
                 @endauth
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalForm">
                     {{ __('ui.language') }}
                 </button>
 

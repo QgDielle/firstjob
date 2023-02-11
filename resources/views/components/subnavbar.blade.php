@@ -10,7 +10,7 @@
 
         </div>
         <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample05">
-            <ul class="row justify-content-center p-0">
+            <ul class="row justify-content-center my-3 p-0">
                 @foreach ($categories as $category)
                 <div class="col-3 col-md-1 me-3">
 
