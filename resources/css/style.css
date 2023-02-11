@@ -164,7 +164,7 @@ body.dark-mode {
     height: 300px;
 }
 
-/* nuova card */
+/* CARD INDEX*/
 .cardBody {
     text-align: center;
     padding: 30px;
@@ -219,38 +219,13 @@ body.dark-mode {
     font-size: 20px;
 }
 
-/* .img-preview-card {
-    height: 230px;
-    width: 230px;
-} */
-
-/* cards chi siamo  */
-/*
-.aboutus {
-    width: 1000px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}  */
+/* CARD CHI SIAMO*/
 
 .aboutus .card {
     position: relative;
     border-radius: 10px;
     border: 0;
 }
-
-.aboutus .col-12:nth-child(1) .icon {
-    background: #e07768;
-}
-
-.aboutus .col-12:nth-child(2) .icon {
-    background: #6eadd4;
-}
-
-.aboutus .col-12:nth-child(3) .icon {
-    background: #4aada9;
-}
-
 
 .aboutus i{
     position: absolute;
@@ -274,18 +249,18 @@ body.dark-mode {
     align-items: center;
     z-index: 1;
     margin: auto;
-
+    background: var(--v-color);
     transform: translateY(100px);
 }
 
 .aboutus .card:hover .face.face1 {
-    background: #ff0057;
+    background: var(--r-color);
     transform: translateY(0px);
 }
 
 .aboutus .card .face.face1 .content {
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.8s;
 }
 
 .aboutus .card:hover .face.face1 .content {
@@ -399,7 +374,7 @@ body.dark-mode {
     padding: 0 16px;
     color: #ffffff;
     font-weight: 700;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 .colm-form p {

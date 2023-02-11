@@ -7,92 +7,97 @@
 
         <div class="aboutus row">
 
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-2">
-                            <img src="https://picsum.photos/300/200" alt="">
+                            <img src="../media/thisisus/gian.png" alt="">
                         </div>
                     </div>
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
+                                <a href="https://www.linkedin.com/in/giangabriele-de-luca/" target="_blank">Giangabriele De Luca</a>
                             </h3>
-                            <p>This is where I network and build my professional protfolio.</p>
+                            <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-2">
-                            <img src="https://picsum.photos/300/200" alt="">
+                            <img src="../media/thisisus/antonio.png" alt="">
                         </div>
                     </div>
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://twitter.com/AdamDipinto" target="_blank">@AdamDipinto</a>
+                                <a href="https://www.linkedin.com/in/antonioneri90/" target="_blank">Antonio Neri</a>
                             </h3>
-                            <p>This is where I read news and network with different social groups.</p>
+                            <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-2">
-                            <img src="https://picsum.photos/300/200" alt="">
+                            <img src="../media/thisisus/flavio.png" alt="">
                         </div>
                     </div>
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://github.com/atom888" target="_blank">atom888</a>
+                                <a href="https://www.linkedin.com/in/flavioscimeca1/" target="_blank">Flavio Scimeca</a>
                             </h3>
-                            <p>This is where I share code and work on projects.</p>
+                            <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-2">
-                            <img src="https://picsum.photos/300/200" alt="">
+                            <img src="../media/thisisus/alfredo.png" alt="">
                         </div>
                     </div>
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://www.linkedin.com/in/adamdipinto/" target="_blank">_adamdipinto</a>
+                                <a href="https://www.linkedin.com/in/alfredo-coppola-953365262/" target="_blank">Alfredo Coppola</a>
                             </h3>
-                            <p>This is where I network and build my professional protfolio.</p>
+                        <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-2">
-                            <img src="https://picsum.photos/300/200" alt="">
+                            <img src="../media/thisisus/francesco.png" alt="">
                         </div>
                     </div>
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://twitter.com/AdamDipinto" target="_blank">@AdamDipinto</a>
+                                <a href="https://www.linkedin.com/in/francesco-esposito-824b9b264" target="_blank">Francesco Esposito</a>
                             </h3>
-                            <p>This is where I read news and network with different social groups.</p>
+                           <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 my-3">
+            <div class="col-12 col-md-4 my-2">
                 <div class="card">
                     <div class="face face1">
                         <div class="content p-1">
@@ -102,9 +107,10 @@
                     <div class="face face2">
                         <div class="content">
                             <h3>
-                                <a href="https://github.com/atom888" target="_blank">atom888</a>
+                                <a href="https://www.linkedin.com/in/giulia-floris-361a89237/" target="_blank">Giulia Floris</a>
                             </h3>
-                            <p>This is where I share code and work on projects.</p>
+                            <p>Aulab Student and</p><br>
+                            <p><b> Junior Full-Stack Developer</b></p>
                         </div>
                     </div>
                 </div>
