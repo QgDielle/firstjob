@@ -1,9 +1,9 @@
 <x-layout>
     <x-header>
-        Lista articoli revisionati
+        {{ __('ui.articleRevisioned') }}
     </x-header>
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace">Torna indietro</i></a>
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace">{{ __('ui.back') }}</i></a>
     </div>
     <div class="container-fluid my-5">
         <div class="container">
@@ -50,7 +50,7 @@
                                                 action="{{ route('revisor.suspend', ['article' => $article]) }}">
                                                 @method('PATCH')
                                                 @csrf
-                                                <button type="submit" class="btn btn-outline-custom2">Sospendi</button>
+                                                <button type="submit" class="btn btn-outline-custom2">{{ __('ui.pause') }}</button>
                                             </form>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -59,14 +59,14 @@
                                                     action="{{ route('revisor.accept', ['article' => $article]) }}">
                                                     @method('PATCH')
                                                     @csrf
-                                                    <button type="submit" class="btn btn-outline-accept">Ripristina</button>
+                                                    <button type="submit" class="btn btn-outline-accept">{{ __('ui.restore') }}</button>
                                                 </form>
                                             @else
                                                 <form method="POST"
                                                     action="{{ route('revisor.decline', ['article' => $article]) }}">
                                                     @method('PATCH')
                                                     @csrf
-                                                    <button type="submit" class="btn btn-outline-danger">Rimuovi</button>
+                                                    <button type="submit" class="btn btn-outline-danger">{{ __('ui.remove') }}</button>
                                                 </form>
                                             @endif
                                         </div>

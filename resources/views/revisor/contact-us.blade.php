@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-header>
-        Chi Siamo
+        {{ __('ui.ourTeam') }}
     </x-header>
     <div class="container my-5">
 
@@ -113,7 +113,7 @@
 
 
         <x-header>
-            Lavora con noi
+            {{ __('ui.workWithUs') }}
         </x-header>
 
 
@@ -123,14 +123,14 @@
                     <form action="{{ route('revisor.submit') }}" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <label for="message" class="form-label">Inserisci il tuo messaggio</label>
-                            <textarea name="message" class="form-control" id="message" rows="3" cols="70"></textarea>
+                            <label for="message" class="form-label"></label>
+                            <textarea name="message" class="form-control" id="message" rows="3" cols="70"> {{ __('ui.mess') }}</textarea>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="checkbox">
-                            <label class="form-check-label" for="checkbox">diventa revisore</label>
+                            <label class="form-check-label" for="checkbox"> {{ __('ui.becomeR') }}</label>
                         </div>
-                        <button type="submit" class="btn btn-outline-custom">invia richiesta</button>
+                        <button type="submit" class="btn btn-outline-custom"> {{ __('ui.sendR') }}</button>
                     </form>
 
                 </div>

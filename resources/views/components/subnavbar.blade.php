@@ -3,7 +3,7 @@
 
         <div class="container d-flex align-items-center">
             <div>
-                <button class="btn btn-outline-custom1 border-1 border-white" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">Categorie</button>
+                <button class="btn btn-outline-custom1 border-1 border-white" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">{{ __('ui.categories') }}</button>
             </div>
 
             <x-search />

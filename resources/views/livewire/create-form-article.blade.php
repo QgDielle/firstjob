@@ -2,7 +2,7 @@
     <div class="row justify-content-around">
         <div class=" d-none d-xl-flex col-12 col-md-4 justify-content-center align-items-center">
             <div class="card w-75 p-3 my-5 mx-3 shadow border-0 rounded-5">
-                <p>Anteprima card:</p>
+                <p> {{ __('ui.preview') }} card:</p>
                 @if (!empty($images))
                     <div class="m-1 img-preview-card mx-auto">
                         <div class="my-3">
@@ -13,24 +13,24 @@
                     </div>
                 @else
                     <div class="shadow m-1 bg-light border border-1 img-preview-card d-block mx-auto">
-                        <p class="text-center">nessuna foto selezionata</p>
+                        <p class="text-center"> {{ __('ui.noPhoto') }}</p>
                     </div>
                 @endif
-                <p class="my-2 d-inline">Category: @if (!empty($categoryName))
+                <p class="my-2 d-inline"> {{ __('ui.category') }}: @if (!empty($categoryName))
                         <p class="card-name">{{ $categoryName->name }}</p>
                     @endif
                 </p>
-                <p class="my-2">Titolo</p>
+                <p class="my-2"> {{ __('ui.title') }}</p>
                 @if (!empty($title))
                     <p class="card-name">{{ $title }}</p>
                 @endif
-                <p class="my-2 d-inline">Price: @if (!empty($price))
+                <p class="my-2 d-inline"> {{ __('ui.price') }}: @if (!empty($price))
                         <p class="card-name">{{ $price }}</p>
                     @endif
                 </p>
 
                 <div class="d-flex justify-content-end mt-auto">
-                    <a class="btn btn-outline-custom" href="#">Dettaglio</a>
+                    <a class="btn btn-outline-custom" href="#"> {{ __('ui.detail') }}</a>
                 </div>
             </div>
             {{-- <div class="card my-5 mx-3 shadow border-0">
@@ -58,7 +58,7 @@
                 <x-messages />
                 @csrf
                 <div class="mb-3">
-                    <label for="title" class="form-label @error('title') is-invalid @enderror">Titolo</label>
+                    <label for="title" class="form-label @error('title') is-invalid @enderror"> {{ __('ui.title') }}</label>
                     <input wire:model.lazy='title' type="text" class="form-control" id="title">
                     @error('title')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="mb-3">
                     {{-- <label for="category" class="form-label">Seleziona Categorie</label> --}}
-                    <label for="category" class="form-label">Seleziona categoria</label>
+                    <label for="category" class="form-label"> {{ __('ui.selectCategory') }}</label>
                     <select wire:model.defer='category' id="category"
                         class="form-select @error('category') is-invalid @enderror">
 
@@ -80,11 +80,14 @@
                         <span class="fst-italic small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
+                @error('images.*')
+                <span class="fst-italic small text-danger">{{ $message }}</span>
+            @enderror
                 {{-- temporary_images --}}
                 @if (!empty($images))
                     <div class="row">
                         <div class="col-12">
-                            <p>Anteprima:</p>
+                            <p> {{ __('ui.preview') }}:</p>
                             <div class="row border border-2 border-info rounded shadow py-4">
                                 @foreach ($images as $key => $image)
                                     <div class="col-6 mt-2">
@@ -93,7 +96,7 @@
                                                 alt="">
                                             <button type="button"
                                                 class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                                wire:click="removeImage({{ $key }})">Cancella</button>
+                                                wire:click="removeImage({{ $key }})"> {{ __('ui.delete') }}</button>
                                         </div>
                                     </div>
                                 @endforeach
@@ -104,7 +107,7 @@
                 {{-- input images --}}
                 <div class="mb-3">
                     <label for="temporary_images"
-                        class="form-label @error('temporary_images') is-invalid @enderror">Immagini</label>
+                        class="form-label @error('temporary_images') is-invalid @enderror"> {{ __('ui.img') }}</label>
                     <input wire:model.lazy='temporary_images' type="file" multiple class="form-control"
                         id="temporary_images" placeholder="seleziona immagine">
                     @error('temporary_images')
@@ -114,21 +117,21 @@
 
                 <div class="mb-3">
                     <label for="description"
-                        class="form-label @error('description') is-invalid @enderror">Messaggio</label>
+                        class="form-label @error('description') is-invalid @enderror"> {{ __('ui.description') }}</label>
                     <textarea wire:model.lazy='description' class="form-control" id="description" rows="7" cols="30"></textarea>
                     @error('description')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="price" class="form-label @error('price') is-invalid @enderror">Prezzo</label>
+                    <label for="price" class="form-label @error('price') is-invalid @enderror"> {{ __('ui.price') }}</label>
                     <input wire:model.lazy='price' type="number" class="form-control" id="price">
                     @error('price')
                         <span class="fst-italic small text-danger">{{ $message }}</span>
                     @enderror
                 </div>
 
-                <button class="btn btn-outline-light" type="submit">inserisci articolo</button>
+                <button class="btn btn-outline-light" type="submit"> {{ __('ui.insertArticle') }}</button>
 
             </form>
         </div>

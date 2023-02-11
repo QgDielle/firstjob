@@ -1,12 +1,12 @@
 <x-layout>
 
     <x-header>
-        Tutti gli articoli
+        {{ __('ui.allArticles') }}
     </x-header>
 
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace"> Torna Indietro</i></a>
-        <a class="btn btn-outline-custom-r" href="{{route('article.create')}}">Aggiungi articolo</a>
+        <a class="btn btn-outline-refuse me-2" href="{{url()->previous()}}"><i class="bi bi-backspace">{{ __('ui.back') }}</i></a>
+        <a class="btn btn-outline-custom-r" href="{{route('article.create')}}">{{ __('ui.addArticle') }}</a>
     </div>
     <div class="container-fluid">
         <div class="container justify-content-center my-5">
@@ -27,7 +27,7 @@
                                 <p class="card-price">€ {{ $article->price }}</p>
                             </div>
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
+                                <a class="btn btn-outline-custom" href="{{ route('article.show', compact('article')) }}">{{ __('ui.detail') }}</a>
                             </div>
                         </div>
 
@@ -35,7 +35,7 @@
                 </div>
                 @empty
                 <div>
-                    <h2 class="text-center">La ricerca non ha generato nessun risultato</h2>
+                    <h2 class="text-center">{{ __('ui.seachNothing') }}</h2>
                 </div>
                 @endforelse
                 <div class="d-flex justify-content-center">

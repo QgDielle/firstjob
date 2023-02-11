@@ -1,6 +1,6 @@
 <x-layout>
     <x-header>
-        Articoli da revisionare
+        {{ __('ui.itemsForReview') }}
     </x-header>
 
     <div class="container d-flex justify-content-center">
@@ -74,29 +74,28 @@
                         <p class="m-2">€ {{ $article_to_check->price }}</p>
                         <p class="description m-2">{{ $article_to_check->description }}</p>
                         <div class="d-flex justify-content-center">
-                            <a href="#" class=" mx-2 btn btn-2 mt-2">####</a>
                             <form method="POST"
                                 action="{{ route('revisor.accept', ['article' => $article_to_check]) }}">
                                 @method('PATCH')
                                 @csrf
-                                <button type="submit" class=" mx-2 btn btn-outline-accept my-1">Accetta</button>
+                                <button type="submit" class=" mx-2 btn btn-outline-accept my-1">{{ __('ui.accept') }}</button>
                             </form>
                             <form method="POST"
                                 action="{{ route('revisor.decline', ['article' => $article_to_check]) }}">
                                 @method('PATCH')
                                 @csrf
-                                <button type="submit" class=" mx-2 btn btn-outline-refuse my-1">Rifiuta</button>
+                                <button type="submit" class=" mx-2 btn btn-outline-refuse my-1">{{ __('ui.reject') }}</button>
                             </form>
                         </div>
                         @if (count($article_to_check->images))
                             @foreach ($article_to_check->images as $image)
                                 <div class="card-body">
-                                    <h5 class="tx-accent">Revisione immagini</h5>
-                                    <p>Adulti <span class="{{ $image->adult }}"></span></p>
-                                    <p>Satira <span class="{{ $image->spoof }}"></span></p>
-                                    <p>Medicina <span class="{{ $image->medical }}"></span></p>
-                                    <p>Violenza <span class="{{ $image->violence }}"></span></p>
-                                    <p>Contenuto spinto <span class="{{ $image->racy }}"></span></p>
+                                    <h5 class="tx-accent">{{ __('ui.revisionImg') }}</h5>
+                                    <p>{{ __('ui.adult') }} <span class="{{ $image->adult }}"></span></p>
+                                    <p>{{ __('ui.satire') }} <span class="{{ $image->spoof }}"></span></p>
+                                    <p>{{ __('ui.medicine') }} <span class="{{ $image->medical }}"></span></p>
+                                    <p>{{ __('ui.violence') }} <span class="{{ $image->violence }}"></span></p>
+                                    <p>{{ __('ui.contentSexual') }} <span class="{{ $image->racy }}"></span></p>
                                 </div>
                             @endforeach
                             <div class="card-text">

@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <a class="btn btn-outline-custom"
-                                        href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
+                                        href="{{ route('article.show', compact('article')) }}">{{ __('ui.detail') }}</a>
                                 </div>
                             </div>
 

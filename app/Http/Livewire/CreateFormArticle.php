@@ -78,8 +78,8 @@ class CreateFormArticle extends Component
         'description' => 'required|min:3|max:2000',
         'category' => 'required',
         'price' => 'required|numeric',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024',
+        'images.*' => 'image|max:1024|dimensions:max_width=2000,max_height=1800',
+        'temporary_images.*' => 'image|max:1024|dimensions:max_width=2000,max_height=1800',
     ];
 
     protected $messages = [

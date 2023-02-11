@@ -185,9 +185,9 @@ body.dark-mode {
 }
 
 .img-container img {
-    transform: skew(0deg, -13deg);
+    transform: skew(0deg, 0deg);
     height: 250px;
-    /* margin: -35px 0px 0px -70px; */
+    margin: -20px 0px 0px 0px;
 }
 
 .inner-skew {
@@ -195,7 +195,7 @@ body.dark-mode {
     border-radius: 20px;
     overflow: hidden;
     padding: 0px;
-    transform: skew(0deg, 13deg);
+    transform: skew(0deg, 0deg);
     font-size: 0px;
     margin: 30px 0px 0px 0px;
     background: var(--pr-color);

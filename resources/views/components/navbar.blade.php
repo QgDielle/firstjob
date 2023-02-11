@@ -16,27 +16,27 @@
                 </li>
                 <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
-                        href="{{ route('revisor.contactus') }}">Chi siamo</a>
+                        href="{{ route('revisor.contactus') }}">{{ __('ui.ourTeam') }}</a>
                 </li>
                 @if (Auth::check() && Auth::user()->is_revisor)
                     <li class="nav-item d-flex">
                         <a class="btn btn-outline-custom1" aria-current="page"
-                            href="{{ route('revisor.index') }}">Revisione</a>
+                            href="{{ route('revisor.index') }}">{{ __('ui.review') }}</a>
                         @if (App\Models\Article::toBeRevisionedCount())
                             <span id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
                         @endif
                     </li>
                     <li class="nav-item ">
-                        <a class="btn btn-outline-custom1 " href="{{ route('revisor.recap') }}">Articoli revisionati</a>
+                        <a class="btn btn-outline-custom1 " href="{{ route('revisor.recap') }}">{{ __('ui.reviewedArticles') }}</a>
                     </li>
                 @endif
                 <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
-                        href="{{ route('article.index') }}">Tutti gli articoli</a>
+                        href="{{ route('article.index') }}">{{ __('ui.allArticles') }}</a>
                 </li>
                 @auth
                     <li class="nav-item  list-unstyled me-3">
-                        <p class="nav-link text-white" href="#">Ciao {{ Auth::user()->name }} <i
+                        <p class="nav-link text-white" href="#">{{ __('ui.hello') }} {{ Auth::user()->name }} <i
                                 class="bi bi-person-lines-fill mx-1 fs-6 text-white"></i> </p>
                     </li>
                 @endauth
@@ -46,7 +46,7 @@
 
                  @auth
                 <a class="btn btn-outline-light  rounded-pill me-3 fw-bold  fs-md-5  "
-                    href="{{ route('article.create') }}"><i class="bi bi-plus-circle me-2"></i>Aggiungi articolo</a>
+                    href="{{ route('article.create') }}"><i class="bi bi-plus-circle me-2"></i>{{ __('ui.addArticle') }}</a>
 
 
                     <div class="me-3">
@@ -59,13 +59,11 @@
                 @else
                     <div class="me-3 d-flex align-items-center h-50">
                         <a class="btn btn-outline-accept  rounded-pill me-3  fw-bold fs-md-5"
-                            href="{{ route('login') }}">Accedi
-                            |
-                            registrati</a>
+                            href="{{ route('login') }}">{{ __('ui.login|register') }}</a>
                     </div>
                 @endauth
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalForm">
-                    Lingue
+                    {{ __('ui.language') }}
                 </button>
 
             </div>
