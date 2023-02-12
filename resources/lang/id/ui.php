@@ -1,87 +1,87 @@
 <?php
 return [
 
-//WELCOME
-'allArticles'=>'Produk',
-'insertHome'=>'Iklan Anda dalam dua klik',
-'insertButton'=>'Mulai',
-'detail'=>'Detail',
+    //WELCOME
+    'allArticles' => 'Produk',
+    'insertHome' => 'Iklan Anda dalam dua klik',
+    'insertButton' => 'Mulai',
+    'detail' => 'Detail',
 
 
 
-//REVISOR
-//RECAP
-'articleRevisioned' => 'Daftar artikel yang diulas',
-'pause' => 'Stop',
-'restore' => 'kembali',
-'remove' => 'Hapus',
+    //REVISOR
+    //RECAP
+    'articleRevisioned' => 'Daftar artikel yang diulas',
+    'pause' => 'Stop',
+    'restore' => 'kembali',
+    'remove' => 'Hapus',
 
-//INDEX
-'itemsForReview' => 'Item untuk ditinjau',
-'accept' => 'Terima',
-'reject' => 'Tolak',
-'revisionImg' => 'Ulasan gambar',
-'adult' => 'Orang dewasa',
-'satire' => 'Sindiran',
-'medicine' => 'Obat',
-'violence' => 'Kekerasan',
-'contentSexual' => 'Konten seksual',
+    //INDEX
+    'itemsForReview' => 'Item untuk ditinjau',
+    'accept' => 'Terima',
+    'reject' => 'Tolak',
+    'revisionImg' => 'Ulasan gambar',
+    'adult' => 'Orang dewasa',
+    'satire' => 'Sindiran',
+    'medicine' => 'Obat',
+    'violence' => 'Kekerasan',
+    'contentSexual' => 'Konten seksual',
 
-//CONTACT-US
-'workWithUs' => 'Karir',
-
-
-
-
-//LIVEWIRE
-//CREATE-FORM-ARTICLE
-'title' => 'Judul',
-'selectCategory' => 'Pilih Kategori',
-'preview' => 'Preview',
-'delete' => 'Hapus',
-'img' => 'Foto',
-'mess' => 'Pesan',
-'price' => 'Harga',
-'insertArticle' => 'Tambah artikel',
+    //CONTACT-US
+    'workWithUs' => 'Karir',
 
 
 
-//COMPONENTS
-//SUBNAVBAR
-'categories'=> 'Kategori',
 
-//SEARCH
-'search' => 'Cari',
-
-//NAVBAR
-'review' => 'Revisi',
-'reviewedArticles' => 'Artikel ditinjau',
-'profile' => 'Profil',
-'insertAd' => 'menyisipkan artikel',
-'register' => 'Daftar',
-
-//FOOTER
-//??????????????
+    //LIVEWIRE
+    //CREATE-FORM-ARTICLE
+    'title' => 'Judul',
+    'selectCategory' => 'Pilih Kategori',
+    'preview' => 'Preview',
+    'delete' => 'Hapus',
+    'img' => 'Foto',
+    'mess' => 'Pesan',
+    'price' => 'Harga',
+    'insertArticle' => 'Tambah artikel',
 
 
 
-//CATEGORY
-//INDEX
-'addArticle' => 'Tambah artikel',
-'nothingArticle' => 'Kosong, untuk tambah artikel',
-'clickhere' => 'Klik di sini',
+    //COMPONENTS
+    //SUBNAVBAR
+    'categories' => 'Kategori',
+
+    //SEARCH
+    'search' => 'Cari',
+
+    //NAVBAR
+    'review' => 'Revisi',
+    'reviewedArticles' => 'Artikel ditinjau',
+    'profile' => 'Profil',
+    'insertAd' => 'menyisipkan artikel',
+    'register' => 'Daftar',
+
+    //FOOTER
+    //??????????????
 
 
 
-//ARTICLE
-//SHOW
-'category' => 'Kategori',
-'description' => 'Deskripsi',
-'contact' => 'Hubungi kami',
+    //CATEGORY
+    //INDEX
+    'addArticle' => 'Tambah artikel',
+    'nothingArticle' => 'Kosong, untuk tambah artikel',
+    'clickhere' => 'Klik di sini',
 
-//INDEX
-'searchNothing' => 'Hasil tidak ditemukan',
 
-//LINGUA
-'lanSel' => 'ID'
+
+    //ARTICLE
+    //SHOW
+    'category' => 'Kategori',
+    'description' => 'Deskripsi',
+    'contact' => 'kembali ke rumah',
+
+    //INDEX
+    'searchNothing' => 'Hasil tidak ditemukan',
+
+    //LINGUA
+    'lanSel' => 'ID'
 ];

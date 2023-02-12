@@ -4,16 +4,17 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="nav-brand me-2"><a href="{{ route('welcome') }}"><img style="width: 100px" class="" src="/media/bgwhite.png" alt=""></a></div>
+        <div class="nav-brand me-2"><a href="{{ route('welcome') }}"><img style="width: 100px" class=""
+                    src="/media/bgwhite.png" alt=""></a></div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  align-items-start">
 
-                
+
                 <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
                         href="{{ route('revisor.contactus') }}">{{ __('ui.ourTeam') }}</a>
                 </li>
-                
+
                 <li class="nav-item py-3 py-md-0">
                     <a class="btn btn-outline-custom1 me-1" aria-current="page"
                         href="{{ route('article.index') }}">{{ __('ui.allArticles') }}</a>
@@ -23,43 +24,55 @@
                 {{-- DROPDOWN AUTORIZZATO E NON --}}
                 <li class="nav-item p-3 py-md-0 dropdown">
                     @auth
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ __('ui.hello') }} <b class="text-black">{{ Auth::user()->name }}</b> <i class="bi bi-person-lines-fill fs-6 text-white"></i>
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ __('ui.hello') }} <b class="text-black">{{ Auth::user()->name }}</b> <i
+                                class="bi bi-person-lines-fill fs-6 text-white"></i>
                         </a>
 
 
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('article.profile', ['user_id' => auth()->id()]) }}">Profilo</a></li>
-                            
+                            <li><a class="dropdown-item"
+                                    href="{{ route('article.profile', ['user_id' => auth()->id()]) }}">Profilo</a></li>
+
                             @if (Auth::check() && Auth::user()->is_revisor)
-                                <li class="d-flex align-items-center position-relative"><a class="dropdown-item" href="{{ route('revisor.index') }}">{{ __('ui.review') }}</a>
+                                <li class="d-flex align-items-center position-relative"><a class="dropdown-item"
+                                        href="{{ route('revisor.index') }}">{{ __('ui.review') }}</a>
                                     @if (App\Models\Article::toBeRevisionedCount())
                                         <span id="notification">{{ App\Models\Article::toBeRevisionedCount() }}</span>
                                     @endif
                                 </li>
-                                <li><a class="dropdown-item" href="{{ route('revisor.recap') }}">{{ __('ui.reviewedArticles') }}</a></li>
+                                <li><a class="dropdown-item"
+                                        href="{{ route('revisor.recap') }}">{{ __('ui.reviewedArticles') }}</a></li>
                             @endif
                             <li><a class="dropdown-item" href="{{ route('article.create') }}">{{ __('ui.insertAd') }}<i
-                                class="bi bi-plus-circle ms-2"></i></a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a></li>
+                                        class="bi bi-plus-circle ms-2"></i></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+                            </li>
                             <form id="form-logout" method="POST" class="d-none " action="{{ route('logout') }}">@csrf
                             </form>
                         </ul>
-
                     @else
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Accedi
                             <i class="bi bi-person-lines-fill fs-6 text-white"></i>
                         </a>
 
 
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="{{ route('article.create') }}">{{ __('ui.insertAd') }}<i
-                                class="bi bi-plus-circle ms-2"></i></a></li>
-                                <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ route('login') }}">{{ __('ui.login|register') }}</a></li>
+                                        class="bi bi-plus-circle ms-2"></i></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{{ route('login') }}">{{ __('ui.login|register') }}</a>
+                            </li>
                         </ul>
-                    
+
                     @endauth
                 </li>
 
@@ -86,8 +99,9 @@
                             href="{{ route('login') }}">{{ __('ui.login|register') }}</a>
                     </div>
                 @endauth --}}
-                <button type="button" class="btn btn-outline-custom1" data-bs-toggle="modal" data-bs-target="#ModalForm">
-                    <i class="fa-solid fa-earth-americas me-1"></i>{{__('ui.lanSel')}}
+                <button type="button" class="btn btn-outline-custom1" data-bs-toggle="modal"
+                    data-bs-target="#ModalForm">
+                    <i class="fa-solid fa-earth-americas me-1"></i>{{ __('ui.lanSel') }}
                 </button>
 
             </div>

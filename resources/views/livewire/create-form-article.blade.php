@@ -1,4 +1,4 @@
-<div class="container-fluid my-3  rounded-2 px-md-5" wire:poll>
+<div class="container-fluid my-3  rounded-2 px-md-5">
     <div class="row justify-content-around">
         {{-- <div class=" d-none d-xl-flex col-12 col-md-4 justify-content-center align-items-center">
             <div class="card w-75 p-3 my-5 mx-3 shadow border-0 rounded-5">

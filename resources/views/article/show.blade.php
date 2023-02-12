@@ -3,7 +3,8 @@
         {{ $article->title }}
     </x-header>
     <div class="container d-flex justify-content-center">
-        <a class="btn btn-outline-refuse me-2" href="{{ url()->previous() }}"> <i class="bi bi-backspace">{{ __('ui.back') }}</i></a>
+        <a class="btn btn-outline-refuse me-2" href="{{ url()->previous() }}"> <i
+                class="bi bi-backspace">{{ __('ui.back') }}</i></a>
         <a class="btn btn-outline-custom-r" href="{{ route('article.create') }}">{{ __('ui.addArticle') }}</a>
     </div>
     <div class="container justify-content-around my-5">
@@ -57,18 +58,17 @@
                     </div>
                 @endif
             </div>
-            <div class="col-12 col-md-6">
-                <div>
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="card shadow-md w-50">
                     <div class="card-body">
-                        <h2 class="card-title mt-3">{{ $article->title }}</h2>
-                        <hr class="w-75 mx-auto">
+                        <h2 class="card-title pb-2 mt-3 border-bottom border-dark">{{ $article->title }}</h2>
                         <p>{{ __('ui.category') }}:</p>
                         <h5 class="card-category m-2">{{ $article->category->name }}</h5>
                         <p>{{ __('ui.price') }}:</p>
                         <p class="card-price m-2">€ {{ $article->price }}</p>
                         <p>{{ __('ui.description') }}:</p>
                         <p class="description fst-italic">{{ $article->description }}</p>
-                        <a href="#" class="btn btn-outline-custom">{{ __('ui.contact') }}</a>
+                        <a href="{{ route('welcome') }}" class="btn btn-outline-custom">{{ __('ui.contact') }}</a>
 
                     </div>
                 </div>

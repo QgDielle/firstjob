@@ -7,11 +7,17 @@
     --b-color: #73c7de;
     --l-color: #a954dd;
 }
-
-p {
-    color: #033d74;
+#revisor-page p {
+    color: black !important;
 }
-th{
+p,
+h2,
+h3,
+h4,
+h5 {
+    color: #033d74 !important;
+}
+th {
     color: #033d74;
 }
 body {
@@ -24,10 +30,9 @@ body {
     background-image: url("../../public/media/bgnew.jpg");
     background-position: center;
     background-size: cover;
-    
 }
 
-#logo1{
+#logo1 {
     margin: 0;
 }
 
@@ -44,21 +49,19 @@ body {
     bottom: 15px;
 }
 
-.insert-ad{
-background-color:var(--pr-color);
-border-radius: 10px;
-border: 4px solid var(--r-color);
-padding: 10px; 
-color:white;
-
+.insert-ad {
+    background-color: var(--pr-color);
+    border-radius: 10px;
+    border: 4px solid var(--r-color);
+    padding: 10px;
+    color: white;
 }
 
 .bg-custom1 {
     background-color: var(--pr-color);
-    
 }
-.bg-custom1 h4{
-    color: #FFF;
+.bg-custom1 h4 {
+    color: #fff;
 }
 .img-preview {
     width: 200px;
@@ -248,7 +251,7 @@ color:white;
     border: 0;
 }
 
-.aboutus i{
+.aboutus i {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -333,7 +336,7 @@ color:white;
 /* LOGIN */
 
 .colm-form .form-container {
-    background-color:white;
+    background-color: white;
     border: none;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -342,7 +345,8 @@ color:white;
     padding: 20px;
 }
 
-.colm-form .form-container input, .colm-form .form-container .btn-login {
+.colm-form .form-container input,
+.colm-form .form-container .btn-login {
     width: 100%;
     margin: 5px 0;
     height: 45px;
@@ -411,14 +415,15 @@ color:white;
     text-decoration: underline;
 }
 
-.insertDati{
+.insertDati {
     font-weight: bold;
     color: var(--pr-color);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
     font-size: 35px;
     text-transform: uppercase;
 }
-.mission-style{
+.mission-style {
     color: var(--r-color);
     font-size: 25px;
     justify-content: center;

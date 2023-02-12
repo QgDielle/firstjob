@@ -1,95 +1,95 @@
 <?php
 return [
 
-// WELCOME
-'allArticles'=>'All Articles',
-'insertHome'=>'Your ad in two simple clicks',
-'insertButton'=>'Click Here',
-'detail'=>'Detail',
+    // WELCOME
+    'allArticles' => 'All Articles',
+    'insertHome' => 'Your ad in two simple clicks',
+    'insertButton' => 'Click Here',
+    'detail' => 'Detail',
 
 
 
-//REVISOR
-//RECAP
-'articleRevisioned' => 'Revised Articles List',
-'back' => 'Back',
-'pause' => 'Pause',
-'restore' => 'Restore',
-'remove' => 'Remove',
+    //REVISOR
+    //RECAP
+    'articleRevisioned' => 'Revised Articles List',
+    'back' => 'Back',
+    'pause' => 'Pause',
+    'restore' => 'Restore',
+    'remove' => 'Remove',
 
-//INDEX
-'itemsForReview' => 'Items to review',
-'accept' => 'Accept',
-'reject' => 'Reject',
-'revisionImg' => 'Image Review',
-'adult' => 'Adult',
-'satire' => 'Satire',
-'medicine' => 'Medicine',
-'violence' => 'Violence',
-'contentSexual' => 'Sexual Content',
+    //INDEX
+    'itemsForReview' => 'Items to review',
+    'accept' => 'Accept',
+    'reject' => 'Reject',
+    'revisionImg' => 'Image Review',
+    'adult' => 'Adult',
+    'satire' => 'Satire',
+    'medicine' => 'Medicine',
+    'violence' => 'Violence',
+    'contentSexual' => 'Sexual Content',
 
-//CONTACT-US
-'ourTeam' => 'About Us',
-'workWithUs' => 'Join Us',
-'mess' => 'Insert your message',
-'becomeR' => 'Become revisor',
-'sendR' => 'Send request',
-
-
-
-//LIVEWIRE
-//CREATE-FORM-ARTICLE
-'noPhoto' =>'No photo selected',
-'title' => 'Title',
-'selectCategory' => 'Select Category',
-'preview' => 'Preview',
-'delete' => 'Delete',
-'img' => 'Image',
-'mess' => 'Description',
-'price' => 'Price',
-'insertArticle' => 'Insert Article',
+    //CONTACT-US
+    'ourTeam' => 'About Us',
+    'workWithUs' => 'Join Us',
+    'mess' => 'Insert your message',
+    'becomeR' => 'Become revisor',
+    'sendR' => 'Send request',
 
 
 
-//COMPONENTS
-//SUBNAVBAR
-'categories'=> 'Categories',
-
-//SEARCH
-'search' => 'Search',
-
-//NAVBAR
-'review' => 'Review',
-'reviewedArticles' => 'Articles Reviewed',
-'profile' => 'Profile',
-'insertAd' => 'Insert Ad',
-'register' => 'Register',
-'hello' => 'Hello',  
-'login|register' => 'Login | Register',  
-'language' => 'Language', 
-
-//FOOTER
-//??????????????
+    //LIVEWIRE
+    //CREATE-FORM-ARTICLE
+    'noPhoto' => 'No photo selected',
+    'title' => 'Title',
+    'selectCategory' => 'Select Category',
+    'preview' => 'Preview',
+    'delete' => 'Delete',
+    'img' => 'Image',
+    'mess' => 'Description',
+    'price' => 'Price',
+    'insertArticle' => 'Insert Article',
 
 
 
-//CATEGORY
-//INDEX
-'addArticle' => 'Add Article',
-'nothingArticle' => "Sorry, we couldn't find anything to add a new article",
-'clickhere' => 'click here',
+    //COMPONENTS
+    //SUBNAVBAR
+    'categories' => 'Categories',
+
+    //SEARCH
+    'search' => 'Search',
+
+    //NAVBAR
+    'review' => 'Review',
+    'reviewedArticles' => 'Articles Reviewed',
+    'profile' => 'Profile',
+    'insertAd' => 'Insert Ad',
+    'register' => 'Register',
+    'hello' => 'Hello',
+    'login|register' => 'Login | Register',
+    'language' => 'Language',
+
+    //FOOTER
+    //??????????????
 
 
 
-//ARTICLE
-//SHOW
-'category' => 'Category',
-'description' => 'Description',
-'contact' => 'Contact',
+    //CATEGORY
+    //INDEX
+    'addArticle' => 'Add Article',
+    'nothingArticle' => "Sorry, we couldn't find anything to add a new article",
+    'clickhere' => 'click here',
 
-//INDEX
-'searchNothing' => 'Your search did not match any result.',
 
-//LINGUA
-'lanSel' => 'EN'
+
+    //ARTICLE
+    //SHOW
+    'category' => 'Category',
+    'description' => 'Description',
+    'contact' => 'Back to Home',
+
+    //INDEX
+    'searchNothing' => 'Your search did not match any result.',
+
+    //LINGUA
+    'lanSel' => 'EN'
 ];

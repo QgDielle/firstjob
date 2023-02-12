@@ -5,16 +5,15 @@
 
 
     <div class="container-fluid sfondo-1 vh-100">
-        <x-messages />
-       
+
 
         <div class="row justify-content-center align-content-center h-100">
-            
+            <x-messages />
             <div class="col-md-6">
             </div>
 
             <div class="col-12 col-md-3">
-                    
+
                 <div class="d-flex flex-column insert-ad">
                     <h4 class=" mb-3 text-center display-6">{{ __('ui.insertHome') }}</h4>
                     <a class="btn btn-outline-custom1 border border-1 mx-auto fs-5"
@@ -30,7 +29,7 @@
     <x-header>
         {{ __('ui.allArticles') }}
     </x-header>
-    
+
     <div class="container-fluid">
         <div class="container justify-content-center">
             <div class="row my-3">

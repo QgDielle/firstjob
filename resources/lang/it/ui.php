@@ -1,94 +1,97 @@
 <?php
 return [
 
-// WELCOME
-'allArticles'=>'Tutti gli articoli',
-'insertHome'=>'Il tuo annuncio in due semplici click',
-'insertButton'=>'Inizia subito',
-'detail'=>'Dettaglio',
+    // WELCOME
+    'allArticles' => 'Tutti gli articoli',
+    'insertHome' => 'Il tuo annuncio in due semplici click',
+    'insertButton' => 'Inizia subito',
+    'detail' => 'Dettaglio',
 
 
 
-//REVISOR
-//RECAP
-'articleRevisioned' => 'Lista articoli revisionati',
-'back' => 'Torna indietro', 
-'pause' => 'Sospendi',
-'restore' => 'Ripristina',
-'remove' => 'Rimuovi',
+    //REVISOR
+    //RECAP
+    'articleRevisioned' => 'Lista articoli revisionati',
+    'back' => 'Torna indietro',
+    'pause' => 'Sospendi',
+    'restore' => 'Ripristina',
+    'remove' => 'Rimuovi',
 
-//INDEX
-'itemsForReview' => 'Articoli da revisionare',
-'accept' => 'Accetta',
-'reject' => 'Rifiuta',
-'revisionImg' => 'Revisione immagini',
-'adult' => 'Adulti',
-'satire' => 'Satira',
-'medicine' => 'Medicina',
-'violence' => 'Violenza',
-'contentSexual' => 'Contenuto Sessuale',
+    //INDEX
+    'itemsForReview' => 'Articoli da revisionare',
+    'accept' => 'Accetta',
+    'reject' => 'Rifiuta',
+    'revisionImg' => 'Revisione immagini',
+    'adult' => 'Adulti',
+    'satire' => 'Satira',
+    'medicine' => 'Medicina',
+    'violence' => 'Violenza',
+    'contentSexual' => 'Contenuto Sessuale',
 
-//CONTACT-US
-'ourTeam' => "Chi Siamo",
-'workWithUs' => 'Lavora con noi',
-'mess' => 'Inserisci il tuo messaggio', 
-'becomeR' => 'Diventa revisore', 
-'sendR' => 'Invia richiesta', 
-
-
-
-//LIVEWIRE
-//CREATE-FORM-ARTICLE
-'noPhoto' =>'Nessuna foto selezionata',
-'title' => 'Titolo',
-'selectCategory' => 'Seleziona Categoria',
-'preview' => 'Anteprima',
-'delete' => 'Cancella',
-'img' => 'Immagini',
-'description' => 'Descrizione',
-'price' => 'Prezzo',
-'insertArticle' => 'Inserisci Articolo',
+    //CONTACT-US
+    'ourTeam' => "Chi Siamo",
+    'workWithUs' => 'Lavora con noi',
+    'mess' => 'Inserisci il tuo messaggio',
+    'becomeR' => 'Diventa revisore',
+    'sendR' => 'Invia richiesta',
 
 
 
-//COMPONENTS
-//SUBNAVBAR
-'categories'=> 'Categorie',
-
-//SEARCH
-'search' => 'Ricerca',
-
-//NAVBAR
-'review' => 'Revisione',
-'reviewedArticles' => 'Articoli Revisionati',
-'profile' => 'Profilo',
-'insertAd' => 'Inserisci Annuncio',
-'register' => 'Registrati',
-'hello' => 'Ciao',  /*********/
-'login|register' => 'Accedi | Registrati',  /*******/
-'language' => 'Lingua',  /******/
-
-//FOOTER
-//??????????????
+    //LIVEWIRE
+    //CREATE-FORM-ARTICLE
+    'noPhoto' => 'Nessuna foto selezionata',
+    'title' => 'Titolo',
+    'selectCategory' => 'Seleziona Categoria',
+    'preview' => 'Anteprima',
+    'delete' => 'Cancella',
+    'img' => 'Immagini',
+    'description' => 'Descrizione',
+    'price' => 'Prezzo',
+    'insertArticle' => 'Inserisci Articolo',
 
 
 
-//CATEGORY
-//INDEX
-'addArticle' => 'Aggiungi Articolo',
-'nothingArticle' => 'Nessun articolo, per aggiungere uno',
-'clickhere' => 'clicca quì',
+    //COMPONENTS
+    //SUBNAVBAR
+    'categories' => 'Categorie',
+
+    //SEARCH
+    'search' => 'Ricerca',
+
+    //NAVBAR
+    'review' => 'Revisione',
+    'reviewedArticles' => 'Articoli Revisionati',
+    'profile' => 'Profilo',
+    'insertAd' => 'Inserisci Annuncio',
+    'register' => 'Registrati',
+    'hello' => 'Ciao',
+    /*********/
+    'login|register' => 'Accedi | Registrati',
+    /*******/
+    'language' => 'Lingua',
+    /******/
+
+    //FOOTER
+    //??????????????
 
 
 
-//ARTICLE
-//SHOW
-'category' => 'Categoria',
-'contact' => 'Contatta',
+    //CATEGORY
+    //INDEX
+    'addArticle' => 'Aggiungi Articolo',
+    'nothingArticle' => 'Nessun articolo, per aggiungerne uno',
+    'clickhere' => 'clicca quì',
 
-//INDEX
-'searchNothing' => 'La ricerca non ha generato nessun risultato',
-//LINGUA
 
-'lanSel' => 'IT'
+
+    //ARTICLE
+    //SHOW
+    'category' => 'Categoria',
+    'contact' => 'Torna alla Home',
+
+    //INDEX
+    'searchNothing' => 'La ricerca non ha generato nessun risultato',
+    //LINGUA
+
+    'lanSel' => 'IT'
 ];
