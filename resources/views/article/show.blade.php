@@ -69,8 +69,10 @@
                         <p>{{ __('ui.description') }}:</p>
                         <p class="description fst-italic">{{ $article->description }}</p>
                         <a href="{{ route('welcome') }}" class="btn btn-outline-custom">{{ __('ui.contact') }}</a>
-
+                        
                     </div>
+                    <p class="text-muted d-inline">{{$article->user->name}} , {{$article->created_at->format('d/m/Y')}}</p>
+
                 </div>
             </div>
         </div>

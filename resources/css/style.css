@@ -428,3 +428,9 @@ body {
     font-size: 25px;
     justify-content: center;
 }
+
+.carouselBtn{
+    background-color: var(--r-color);
+    border-radius: 50px;
+    padding: 20px;
+}

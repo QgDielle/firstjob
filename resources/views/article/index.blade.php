@@ -38,7 +38,7 @@
                     </div>
                 @empty
                     <div>
-                        <h2 class="text-center">{{ __('ui.seachNothing') }}</h2>
+                        <h2 class="text-center">{{ __('ui.searchNothing') }}</h2>
                     </div>
                 @endforelse
                 <div class="d-flex justify-content-center">
