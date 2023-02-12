@@ -15,7 +15,7 @@ class RevisorController extends Controller
     public function __construct()
     {
         $this->middleware('isRevisor')->except("revisor_contactus", "revisor_submit", "revisor_make");
-        $this->middleware('auth');
+        $this->middleware('auth')->except("revisor_contactus");
     }
 
     public function index()

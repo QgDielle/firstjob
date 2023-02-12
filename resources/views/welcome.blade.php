@@ -5,18 +5,19 @@
 
 
     <div class="container-fluid sfondo-1 vh-100">
+        <x-messages />
+        <div class="d-flex justify-content-end">
+            <img id="logo1" style="width: 40vmax" class="" src="/media/presto-it-logo.png" alt="">
+        </div>
 
         <div class="row justify-content-center align-content-center h-75">
-            <x-messages />
-            <div class="col-md-6">
+            
+            <div class="col-md-2">
             </div>
 
             <div class="col-12 col-md-3">
-                <div class="d-flex justify-content-center">
-                    <img style="width: 300px" class="" src="/media/presto-it-logo.png" alt="">
-                </div>
-
-                <div class="d-flex flex-column border-0 rounded-2 p-2 bg-custom1">
+                    
+                <div class="d-flex flex-column border-0 rounded-2 p-3 bg-custom1">
                     <h4 class=" mb-3 text-center display-6">{{ __('ui.insertHome') }}</h4>
                     <a class="btn btn-outline-light mx-auto fs-5"
                         href="{{ route('article.create') }}">{{ __('ui.insertButton') }}</a>
@@ -27,9 +28,11 @@
     </div>
 
     {{-- ARTICLES --}}
-    <div class="container-fluid bg-custom1 rounded-2">
-        <h4 class="text-center mt-5 display-2 p-3 text-white">{{ __('ui.allArticles') }}</h4>
-    </div>
+
+    <x-header>
+        {{ __('ui.allArticles') }}
+    </x-header>
+    
     <div class="container-fluid">
         <div class="container justify-content-center">
             <div class="row my-3">

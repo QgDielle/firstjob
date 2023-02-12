@@ -5,22 +5,6 @@
     <div class="container mx-auto my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                
-{{--   <form class="bg-custom1 p-3 rounded-2" method="POST" action="{{ route('login') }}">
-                    @csrf
-                    <x-error />
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input name="email" type="email" class="form-control" id="email" value="{{old('email')}}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input name="password" type="password" class="form-control" id="password">
-                    </div>
-
-                    <button type="submit" class="btn btn-outline-light">Login</button>
-                    <a class="btn btn-outline-accept" href="{{route('register')}}">Registrati</a>
-                </form> --}}
 
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -38,9 +22,9 @@
 
                                 <button type="submit" class="btn-login">Accedi</button>
                             </div>
-                                <a href="#" class="text-muted fst-italic">password dimenticata?</a>
                                 
-                            <a href="{{ route('register')}}" class="btn-new w-50 mx-auto text-decoration-none">Crea nuovo account</a>
+                                
+                            <a href="{{ route('register')}}" class="btn-new w-50 mx-auto text-decoration-none">Registrati</a>
                         </div>
                     </div>
                 </form>

@@ -1,4 +1,4 @@
-<div class="container-fluid my-5 pt-2 text-white">
+<div class="container-fluid my-3 pt-2 text-white">
     <div class="container my-5 p-2 text-white">
         <div class="row bg-custom1 rounded-2 ">
             <div class="col-12 ">

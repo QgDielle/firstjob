@@ -8,11 +8,13 @@
     --l-color: #a954dd;
 }
 
-.tx-p {
+p {
     color: #033d74;
 }
-
-.body {
+th{
+    color: #033d74;
+}
+body {
     margin: 0px;
     padding: 0px;
     font-family: nunito, sans-serif;
@@ -23,6 +25,11 @@
     background-position: cover;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 100px;
+}
+
+#logo1{
+    margin-right: 80px;
 }
 
 #notification {
@@ -33,12 +40,17 @@
     width: 18px;
     height: 18px;
     text-align: center;
+    position: absolute;
+    left: 85px;
+    bottom: 15px;
 }
 
 .bg-custom1 {
     background-color: var(--pr-color);
 }
-
+.bg-custom1 h4{
+    color: #FFF;
+}
 .img-preview {
     width: 200px;
 }
@@ -319,7 +331,6 @@
     margin-top: 100px;
     margin-bottom: 150px;
     padding: 20px;
-    width: 600px;
 }
 
 .colm-form .form-container input, .colm-form .form-container .btn-login {
@@ -402,7 +413,4 @@
     color: var(--r-color);
     font-size: 25px;
     justify-content: center;
-}
-p{
-    color: black !important;
 }

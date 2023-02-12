@@ -18,21 +18,21 @@
     <x-navbar />
 
 
-    <main class="min-vh-100">
+    <main>
         {{ $slot }}
     </main>
     <div class="modal fade" id="ModalForm" tabindex="-1" aria-labelledby="ModalFormLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body shadow-md">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
-                    <h2>Seleziona lingua</h2>
-                    <div class="d-flex ">
+                    <h2 class="text-center">Seleziona lingua</h2>
+                    <div class="d-flex justify-content-center">
                         <x-_locale lang="it" />
                         <x-_locale lang="en" />
                         <x-_locale lang="es" />
-
+                        <x-_locale lang="id" />
                     </div>
                 </div>
             </div>

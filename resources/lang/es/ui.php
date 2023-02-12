@@ -89,4 +89,7 @@ return [
 
 //INDEX
 'searchNothing' => 'Su búsqueda no ha dado ningún resultado',
+//LINGUA
+
+'lanSel' => 'ES'
 ];

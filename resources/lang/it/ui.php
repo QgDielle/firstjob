@@ -64,7 +64,7 @@ return [
 'profile' => 'Profilo',
 'insertAd' => 'Inserisci Annuncio',
 'register' => 'Registrati',
-'hello' => 'Salve',  /*********/
+'hello' => 'Ciao',  /*********/
 'login|register' => 'Accedi | Registrati',  /*******/
 'language' => 'Lingua',  /******/
 
@@ -88,4 +88,7 @@ return [
 
 //INDEX
 'searchNothing' => 'La ricerca non ha generato nessun risultato',
+//LINGUA
+
+'lanSel' => 'IT'
 ];
