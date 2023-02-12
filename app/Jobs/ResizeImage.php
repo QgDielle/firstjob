@@ -62,6 +62,8 @@ class ResizeImage implements ShouldQueue
         ->watermark(base_path('public/media/presto-it-logo.png'))
         ->watermarkOpacity(50)
         ->watermarkPosition(Manipulations::POSITION_CENTER)
+        ->watermarkHeight(50, Manipulations::UNIT_PERCENT)
+        ->watermarkWidth(100, Manipulations::UNIT_PERCENT)
         ->save($destWatermarkPath);
     }
 }

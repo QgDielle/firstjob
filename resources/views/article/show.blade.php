@@ -59,7 +59,7 @@
                 @endif
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-center">
-                <div class="card shadow-md w-50">
+                <div class="card shadow-md w-75">
                     <div class="card-body">
                         <h2 class="card-title pb-2 mt-3 border-bottom border-dark">{{ $article->title }}</h2>
                         <p>{{ __('ui.category') }}:</p>
