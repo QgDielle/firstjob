@@ -6,20 +6,18 @@
 
     <div class="container-fluid sfondo-1 vh-100">
         <x-messages />
-        <div class="d-flex justify-content-end">
-            <img id="logo1" style="width: 40vmax" class="" src="/media/presto-it-logo.png" alt="">
-        </div>
+       
 
-        <div class="row justify-content-center align-content-center h-75">
+        <div class="row justify-content-center align-content-center h-100">
             
-            <div class="col-md-2">
+            <div class="col-md-6">
             </div>
 
             <div class="col-12 col-md-3">
                     
-                <div class="d-flex flex-column border-0 rounded-2 p-3 bg-custom1">
+                <div class="d-flex flex-column insert-ad">
                     <h4 class=" mb-3 text-center display-6">{{ __('ui.insertHome') }}</h4>
-                    <a class="btn btn-outline-light mx-auto fs-5"
+                    <a class="btn btn-outline-custom1 border border-1 mx-auto fs-5"
                         href="{{ route('article.create') }}">{{ __('ui.insertButton') }}</a>
                 </div>
 

@@ -1,4 +1,4 @@
-<div class="container-fluid my-3 p-2 px-5 rounded-2 px-md-2" wire:poll>
+<div class="container-fluid my-3  rounded-2 px-md-5" wire:poll>
     <div class="row justify-content-around">
         {{-- <div class=" d-none d-xl-flex col-12 col-md-4 justify-content-center align-items-center">
             <div class="card w-75 p-3 my-5 mx-3 shadow border-0 rounded-5">
@@ -51,13 +51,13 @@
                     <div class="d-flex justify-content-end">
                         <a class="btn btn-outline-custom"
                             href="{{ route('article.show', compact('article')) }}">Dettaglio</a>
-                    </div>
+                    </div>p
                 </div>
             </div>
         </div> --}}
         <div class="col-12 col-md-9 bg-custom1">
 
-            <form class="p-2" wire:submit.prevent='store'>
+            <form class="p-2 p-md-4" wire:submit.prevent='store'>
                 <x-messages />
                 @csrf
                 <div class="mb-3">
@@ -94,7 +94,7 @@
                             <p> {{ __('ui.preview') }}:</p>
                             <div class="row border border-2 border-info rounded shadow py-4">
                                 @foreach ($images as $key => $image)
-                                    <div class="col-6 mt-2">
+                                    <div class="col-12 col-md-6 mt-2">
                                         <div class="mx-auto rounded d-flex flex-column justify-content-center">
                                             <img class="img-preview mx-auto" src="{{ $image->temporaryUrl() }}"
                                                 alt="">

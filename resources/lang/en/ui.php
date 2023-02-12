@@ -89,7 +89,7 @@ return [
 
 //INDEX
 'searchNothing' => 'Your search did not match any result.',
-//LINGUA
 
+//LINGUA
 'lanSel' => 'EN'
 ];

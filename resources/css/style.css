@@ -21,15 +21,14 @@ body {
 }
 
 .sfondo-1 {
-    background-image: url("../../public/media/3a93c940-b3ce-4fdd-a5bb-6a2406a8d14b.png");
-    background-position: cover;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 100px;
+    background-image: url("../../public/media/bgnew.jpg");
+    background-position: center;
+    background-size: cover;
+    
 }
 
 #logo1{
-    margin-right: 80px;
+    margin: 0;
 }
 
 #notification {
@@ -45,8 +44,18 @@ body {
     bottom: 15px;
 }
 
+.insert-ad{
+background-color:var(--pr-color);
+border-radius: 10px;
+border: 4px solid var(--r-color);
+padding: 10px; 
+color:white;
+
+}
+
 .bg-custom1 {
     background-color: var(--pr-color);
+    
 }
 .bg-custom1 h4{
     color: #FFF;

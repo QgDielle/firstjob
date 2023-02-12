@@ -81,4 +81,7 @@ return [
 
 //INDEX
 'searchNothing' => 'Hasil tidak ditemukan',
+
+//LINGUA
+'lanSel' => 'ID'
 ];

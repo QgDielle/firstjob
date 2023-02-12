@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-md bg-custom1 fixed-top">
+<nav class="navbar navbar-expand-md bg-custom1  fixed-top">
     <div class="container-fluid justify-content-between">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="nav-brand me-2"><a href="{{ route('welcome') }}"><img style="width: 100px" class="" src="/media/presto-it-logo.png" alt=""></a></div>
+        <div class="nav-brand me-2"><a href="{{ route('welcome') }}"><img style="width: 100px" class="" src="/media/bgwhite.png" alt=""></a></div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  align-items-start">
 
